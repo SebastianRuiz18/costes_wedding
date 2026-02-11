@@ -1,7 +1,7 @@
 /* =========================================
    1. TIPOGRAFÍA
    ========================================= */
-@font-face { font-family: 'DidotTitlePro'; src: url('fonts/Didot Title.woff2') format('woff2'), url('fonts/Didot Title.woff') format('woff'); font-weight: normal; font-style: normal; font-display: swap; }
+@font-face { font-family: 'DidotTitlePro'; src: url('fonts/Didot.woff2') format('woff2'), url('fonts/Didot.woff') format('woff'); font-weight: normal; font-style: normal; font-display: swap; }
 @font-face { font-family: 'FuturaBookPro'; src: url('fonts/FuturaCyrillicBook.woff2') format('woff2'), url('fonts/FuturaCyrillicBook.woff') format('woff'); font-weight: normal; font-style: normal; font-display: swap; }
 @font-face { font-family: 'FuturaLightPro'; src: url('fonts/FuturaCyrillicLight.woff2') format('woff2'), url('fonts/FuturaCyrillicLight.woff') format('woff'); font-weight: normal; font-style: normal; font-display: swap; }
 
