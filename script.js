@@ -396,6 +396,7 @@ function openDetailsMode(index) {
     nextSectionBar.setAttribute('data-next-index', nextIndex);
 
     if (data.isRSVP) {
+        // ... (Lógica del RSVP se queda igual) ...
         detailBodyText.innerHTML = `
             <div id="rsvp-login-view" class="rsvp-step-container">
                 <p>${t.codePrompt}</p>
@@ -410,12 +411,23 @@ function openDetailsMode(index) {
         detailBodyText.innerHTML = data.detailsContent[currentLang];
     }
 
+    // =====================================================
+    // AQUÍ ESTÁ EL CAMBIO (Líneas modificadas)
+    // =====================================================
     document.body.classList.add('details-mode');
-    detailsContentBox.classList.remove('expanded');
-    detailIcon.classList.remove('fa-minus');
-    detailIcon.classList.add('fa-plus');
-    detailToggleText.textContent = t.details;
     
+    // ANTES: detailsContentBox.classList.remove('expanded');
+    // AHORA: Lo agregamos para que inicie ABIERTO
+    detailsContentBox.classList.add('expanded'); 
+
+    // Ajustamos el icono para que muestre "Menos" (-) porque ya está abierto
+    detailIcon.classList.remove('fa-plus');
+    detailIcon.classList.add('fa-minus');
+
+    // Ajustamos el texto para que diga "CERRAR" porque ya está abierto
+    detailToggleText.textContent = t.close;
+    // =====================================================
+
     swiper.keyboard.disable();
     swiper.mousewheel.disable();
 }
