@@ -12,15 +12,16 @@ const translations = {
         details: "DETAILS",
         close: "CLOSE",
         nextSection: "NEXT SECTION",
-        codePrompt: "Please enter the guest code from your invitation.",
-        codeLabel: "ACCESS CODE",
-        codeError: "Incorrect code. Please try again.",
-        enterBtn: "ENTER",
+        codePrompt: "Please enter your first and last name to find your invitation.",
+        codeLabel: "ACCESS CODE (YOUR NAME)",
+        codeError: "Invitation not found. Please try again or contact the couple.",
+        enterBtn: "FIND INVITATION",
         guest: "GUEST",
         reservedFor: "We have reserved",
-        seats: "seat(s) for you.",
+        seats: "seat(s) for your party.",
         nameLabel: "FULL NAME",
-        attendingLabel: "WILL YOU BE ATTENDING?",
+        attendingLabel: "WILL YOU BE ATTENDING THE WEDDING?",
+        icebreakerLabel: "WILL YOU ATTEND THE ICEBREAKER? (FRIDAY)",
         yes: "YES",
         no: "NO",
         emailLabel: "EMAIL",
@@ -49,15 +50,16 @@ const translations = {
         details: "DETALLES",
         close: "CERRAR",
         nextSection: "SIGUIENTE SECCION",
-        codePrompt: "Por favor ingresa el código de invitado que viene en tu invitación física.",
-        codeLabel: "CÓDIGO DE ACCESO",
-        codeError: "Código incorrecto. Intenta de nuevo.",
-        enterBtn: "ENTRAR",
+        codePrompt: "Por favor ingresa tu nombre (como viene en la invitación) para buscar tus lugares.",
+        codeLabel: "CÓDIGO (TU NOMBRE)",
+        codeError: "Invitación no encontrada. Intenta de nuevo o contacta a la pareja.",
+        enterBtn: "BUSCAR INVITACIÓN",
         guest: "INVITADO",
-        reservedFor: "Hemos reservado",
+        reservedFor: "Hemos encontrado",
         seats: "lugar(es) para ti.",
         nameLabel: "NOMBRE COMPLETO",
-        attendingLabel: "¿NOS ACOMPAÑAS?",
+        attendingLabel: "¿NOS ACOMPAÑAS A LA BODA?",
+        icebreakerLabel: "¿ASISTIRÁS AL ROMPEHIELO? (VIERNES)",
         yes: "SÍ",
         no: "NO",
         emailLabel: "EMAIL",
@@ -78,26 +80,511 @@ const translations = {
     }
 };
 
+// ==========================================
+// BASE DE DATOS DE INVITADOS
+// ==========================================
+const guestsDB = {
+    // INVITADOS JAVAN (Novio)
+    // GRUPO A
+    "CLAUDIAJIMENEZ": ["Claudia Jimenez", "Mom +1"],
+    // GRUPO B
+    "SILVIAARANGURE": ["Silvia Arangure", "Sara Arangure", "Abue Alba Arangure"],
+    // GRUPO C
+    "PRIZILACARBONERO": ["Prizila Carbonero de Rojas", "Omar Rojas"],
+    // GRUPO D
+    "MAYACARBONERO": ["Maya Carbonero", "Stevie Ortega"],
+    // GRUPO F 
+    "VALENTEVILLASENOR": ["Valente Villaseñor", "Jose Villaseñor"],
+    // GRUPO G
+    "RICARDOGIL": ["Ricardo Gil"],
+    // GRUPO H
+    "CONNERBROWN": ["Conner Brown", "Hailey Brown"],
+    // GRUPO J
+    "JORGEJIMENEZ": ["Jorge Jimenez"],
+    // GRUPO K
+    "OMARVEYTIA": ["Omar Veytia", "Brianna Veytia"],
+    // GRUPO L
+    "MADYJIMENEZ": ["Mady Jimenez", "Christian"],
+    // GRUPO M
+    "FRANKBUSTOS": ["Frank Bustos"],
+    // GRUPO N
+    "ROBERTOJACOTT": ["Roberto Jacott", "Luz Mariel Jacott", "Luz Jacott +1"],
+    // GRUPO O
+    "MARIOROJAS": ["Mario Rojas", "Claudia Rojas"],
+    // GRUPO P
+    "ABUELITAELIZABETH": ["Abuelita Elizabeth", "Christian Carbonero", "Tasha Carbonero", "Franky Carbonero", "Audrina Carbonero"],
+    // GRUPO Q
+    "ALEJANDROCARBONERO": ["Alejandro Carbonero", "Cristina Carbonero", "Sebastian Carbonero", "Gaby Carbonero"],
+    // GRUPO R
+    "DAD": ["Dad", "Arlene Carbonero"],
+    // GRUPO S
+    "ANGELICACUEVAS": ["Angelica Cuevas", "Angelica +1"],
+    // GRUPO T
+    "ANTONIOOVIEDO": ["Antonio Oviedo", "Sra. Oviedo"],
+    // GRUPO U
+    "ALFONSODELGADILLO": ["Alfonso Delgadillo", "Kritzia Delgadillo"],
+    // GRUPO V
+    "YOLANDADERIQUER": ["Yolanda Deriquer", "Emiliano Deriquer", "Emiliano + 1"],
+    // GRUPO W
+    "LETICIAGONGORA": ["Leticia Gongora", "Max Vargas", "Max +1"],
+    // GRUPO X
+    "ALVINGOMEZ": ["Alvin Gomez", "Itzel Calleros"],
+    // GRUPO Y
+    "HAIDERAL-JABER": ["Haider Al-Jaber", "Ali Al-Jaber", "Hassan Al-Jaber", "Hassan Wife"],
+    // GRUPO Z
+    "NICKOLASFERNANDEZ": ["Nickolas Fernandez"],
+    // GRUPO AA
+    "MAURICIOORTIZ": ["Mauricio Ortiz", "Shai Ortiz"],
+    // GRUPO BB
+    "KEVINGOMEZ": ["Kevin Gomez", "Kevin Gomez +1"],
+    // GRUPO CC
+    "ARMANIPRIETO": ["Armani Prieto", "Paulina Ramirez"],
+    // GRUPO DD
+    "ARAMOTANEZ": ["Aram Otanez"],
+    // GRUPO FF
+    "GUILLERMOCABALLERO": ["Guillermo Caballero", "Guillermo Caballero +1"],
+    // GRUPO GG
+    "CARLOSDURAN": ["Carlos Duran", "Carlos Duran Wife"],
+    // GRUPO II
+    "JESSERAMIREZ": ["Jesse Ramirez", "Dakota Robertson"],
+    // GRUPO JJ
+    "EDERCONTRERAS": ["Eder Contreras", "Eder +1"],
+    // GRUPO LL
+    "OZIELGONZALEZ": ["Oziel Gonzalez"],
+    // GRUPO MM
+    "KEVINACKERMAN": ["Kevin Ackerman", "Viviana Ackerman"],
+    // GRUPO NN
+    "IVANMARMEL": ["Ivan Marmel", "Ivan + 1"],
+    // GRUPO PP
+    "PATRICIOYRIZAR": ["Patricio Yrizar"],
+    // GRUPO QQ
+    "ANDREAGARCIA": ["Andrea Garcia"],
+    // GRUPO RR
+    "GUILLERMOCARRILLO": ["Guillermo Carrillo", "Guillermo Carrillo +1"],
+    // GRUPO SS
+    "TIFFANYVERDUZCO": ["Tiffany Verduzco", "Omar Camacho Perez"],
+    // GRUPO TT
+    "GASTONBUSTAMANTE": ["Gaston Bustamante", "Gaston Bustamante +1"],
+    // GRUPO UU
+    "ESTEBANMELENDEZ": ["Esteban Melendez"],
+    // GRUPO VV
+    "ANTHONYTHUESON": ["Anthony Thueson", "Andrea Thueson"],
+    // GRUPO YY
+    "JUANPABLOBUSTAMANTE": ["Juan Pablo Bustamante"],
+    // GRUPO ZZ
+    "PAULOKRASOVSKY": ["Paulo Krasovsky"],
+    // GRUPO AAA
+    "BENJAMINAGUILAR": ["Benjamin Aguilar", "Benjamin + 1"],
+    // GRUPO BBB
+    "MARTINTULA": ["Martin Tula", "Martin + 1"],
+    // GRUPO CCC
+    "HECTORZAMORA": ["Hector Zamora", "Hector +1"],
+    // GRUPO DDD
+    "RODRIGOGIRALDEZ": ["Rodrigo Giraldez", "Rodrigo Wife"],
+
+    // INVITADOS ALEXIA (Novia)
+    // GRUPO A
+    "ALEXIAROCHA": ["Alexia Rocha", "Maria Dominga Limón", "Lauro Rocha", "Mauricio Rocha"],
+    // GRUPO B
+    "PATRICIOROCHA": ["Patricio Rocha", "Isabel Mascareño", "Lauro Patricio Rocha", "Isabella Rocha"],
+    // GRUPO C
+    "CRISTELROCHA": ["Cristel Rocha", "Hernán Castaneda", "Emma Victoria Castaneda"],
+    // GRUPO D - CORREGIDO CON ACEVES
+    "JESUSLIMONACEVES": ["Jesús Limón Aceves", "Griselda Torres", "Kenny Limón Torres", "Kevin Limón Torres", "Maria Fernanda Limón"],
+    // GRUPO E
+    "ALANRODRIGUEZ": ["Alan Rodriguez", "Krisbel Limón"],
+    // GRUPO F
+    "SENORRUBENLIMON": ["Señor Ruben Limón", "Carlota Amalia", "Ruben Limón", "Jeovany Limón", "Marcela Farfan"],
+    // GRUPO G
+    "JESUSELENALIMON": ["Jesus Elena Limón", "Ciro Mejia", "Ádaleni Mejia", "Rey Mejia", "Mariana Casian"],
+    // GRUPO H
+    "ALEJANDRINOLIMON": ["Alejandrino Limón", "Arcelia Limón"],
+    // GRUPO I
+    "CINDYLIMON": ["Cindy Limón", "Rodólfo Ramirez"],
+    // GRUPO J
+    "LISETTELIMONDEROBLES": ["Lisette Limón de Robles", "Gustavo Robles"],
+    // GRUPO K - SE QUEDA COMO JESUS LIMON ORIGINAL
+    "JESUSLIMON": ["Jesús Limón", "Adriana Gastelum Limón"],
+    // GRUPO L
+    "LUZMARIANIEBLA": ["Luz Maria Niebla", "Dr. Ruben Camacho"],
+    // GRUPO M
+    "LOURDESMENDEZ": ["Lourdes Méndez", "Fela Osuna"],
+    // GRUPO N
+    "LOLISLIMON": ["Lolis Limón", "Lilibel Gil", "Eduardo Guarello", "Orbelin Gil", "Erika Gil", "Irám Gil", "Ilse Yessenia Gil"],
+    // GRUPO O
+    "RAULVILLARREAL": ["Raul Villarreal", "Estefanía Villarreal", "Diego Villarreal", "Octavio Villarreal", "Mariana Villarreal", "Oscar Villarreal", "Ricardo Villarreal"],
+    // GRUPO P
+    "AMAIRANILIMON": ["Amairani Limón", "Jaime Limón"],
+    // GRUPO Q
+    "LAMBERTOLIMON": ["Lamberto Limón", "Mirna Limón", "Clarissa Limón", "Emmanuel Perez"],
+    // GRUPO R
+    "NEREYDALIMON": ["Nereyda Limón", "Señor Arturo Bobadilla", "Vanessa Bobadilla", "Arturo Bobadilla Limón"],
+    // GRUPO S
+    "CECIGONZALEZ": ["Ceci Gonzalez", "Daniel Gonzalez"],
+    // GRUPO T
+    "LETICIAANGULO": ["Leticia Angulo", "Joel Angulo"],
+    // GRUPO U
+    "MARIELALIMON": ["Mariela Limón", "Miguel Hernandez", "Daniela Limón"],
+    // GRUPO V
+    "MARIBELMEDINA": ["Maribel Medina", "Enrique Gastelum"],
+    // GRUPO W
+    "FAUSTINOGAXIOLA": ["Faustino Gaxiola", "Irma Gaxiola"],
+    // GRUPO X
+    "FRANCISELENES": ["Francis Elenes", "Jaime Leyva"],
+    // GRUPO Y
+    "ENRIQUEROCHA": ["Enrique Rocha"],
+    // GRUPO Z
+    "ERIKAROCHA": ["Erika Rocha", "Erika Elenes"],
+    // GRUPO AA
+    "SOFIAROCHA": ["Sofia Rocha", "Rogelio Ramirez", "Hicel Ramirez Rocha", "Husberto Reveles"],
+    // GRUPO BB
+    "LESLIECHANTELRAMIREZ": ["Leslie Chantel Ramirez"],
+    // GRUPO CC
+    "SENORATAIDEROCHA": ["Señora Taide Rocha", "Ernesto Sillas", "Lyz Gastelum", "Mauricio Sillas", "Jorge Sillas", "Valeria Sillas", "Areli Melendrez", "Taide Sillas", "Ulises Arce"],
+    // GRUPO DD
+    "SILVIAROCHA": ["Silvia Rocha", "Verónica Torres", "Silvia Torres", "Thomas", "Emmanuel Torres", "Britney Hurtado", "Mauricio Torres", "Daritza Torres", "Curtis"],
+    // GRUPO EE
+    "ASHLEYROBLES": ["Ashley Robles", "Liskelsey Robles"],
+    // GRUPO FF
+    "CAROLINAOVIEDOLASHGARI": ["Carolina Oviedo Lashgari", "Nico Lashgari"],
+    // GRUPO GG
+    "COVADONGAESCALANTE": ["Covadonga Escalante", "Emilio Romo"],
+    // GRUPO HH
+    "SARAHSANCHEZ": ["Sarah Sanchez", "Sarah Sanchez plus one"],
+    // GRUPO II
+    "REBECCASIFUENTES": ["Rebecca Sifuentes", "Elizabeth Sifuentes"],
+    // GRUPO JJ
+    "BRIANNAHERRERA": ["Brianna Herrera"],
+    // GRUPO KK
+    "LANDONGRANILLO": ["Landon Granillo", "Landon plus one"],
+    // GRUPO LL
+    "KAILEYWOLF": ["Kailey Wolf", "Henry Wolf"],
+    // GRUPO MM
+    "ALEXISANDERSON": ["Alexis Anderson", "Rebecca Muench"],
+    // GRUPO NN
+    "SOFIAMAYER": ["Sofía Mayer", "Andrés Domínguez"],
+    // GRUPO OO
+    "MICHELLESMITH": ["Michelle Smith", "Jenna Contreras"],
+    // GRUPO PP
+    "MARIOOCHOA": ["Mario Ochoa", "Letizia Riedel", "Señor Mario Ochoa", "Paloma Alonso"],
+    // GRUPO QQ
+    "VIANNYVALENZUELA": ["Vianny Valenzuela", "Jessica Valenzuela"],
+    // GRUPO RR
+    "CRISTINAMACIAS": ["Cristina Macías", "Daniella Ramirez"],
+    // GRUPO SS
+    "QUIQUEFLORES": ["Quique Flores", "Alejandra Dávila"],
+    // GRUPO TT
+    "MARIACARDENAS": ["Maria Cardenas"],
+    // GRUPO UU
+    "LUPITALIMON": ["Lupita Limón", "Alfonso Limón"],
+    // GRUPO VV
+    "LICHINOJOSA": ["Lic Hinojosa", "Paloma Hinojosa"],
+    // GRUPO WW
+    "GUADALUPEBARRAGAN": ["Guadalupe Barragán", "Pompeyo Barragán"],
+    // GRUPO XX
+    "VERONICAJOHNSON": ["Verónica Johnson", "Verónica Johnson plus one"],
+    // GRUPO YY
+    "SANDRATORRES": ["Sandra Torres", "Miguel Rivas"],
+    // GRUPO ZZ
+    "JUANBERNAL": ["Juan Bernal", "Natalia Smith"],
+    // GRUPO AAA
+    "DRAMICHELMARTINEZFRANCO": ["Dra. Michel Martínez Franco", "Dra. Michelle plus one"],
+    // GRUPO BBB
+    "SYDNEYRIBOT": ["Sydney Ribot", "Sydney Ribot plus one"],
+    // GRUPO CCC
+    "ALONDRALIMON": ["Alondra Limón", "Moe Othman"],
+    // GRUPO DDD
+    "ANGELURETA": ["Ángel Ureta", "Juan Alberto Ureta"],
+    // GRUPO EEE
+    "SAMMIERYAN": ["Sammie Ryan", "Carmine Ryan"],
+    // GRUPO FFF
+    "RAMIROGAXIOLA": ["Ramiro Gaxiola", "Fidelia Gaxiola"],
+    // GRUPO GGG
+    "ALEJANDRAROCHA": ["Alejandra Rocha"],
+    // GRUPO HHH
+    "MICHAELLEAL": ["Michael Leal", "Marlene Ortiz"]
+};
+
+// ==========================================
+// LISTA VIP ROMPEHIELO
+// Invitados de la imagen con número en la columna "Domecq"
+// ==========================================
+const rompehieloVIPs = [
+    // Grupo Javan
+    "CLAUDIA JIMENEZ",
+    "MOM +1",
+    "PRIZILA CARBONERO DE ROJAS",
+    "OMAR ROJAS",
+    "MAYA CARBONERO",
+    "STEVIE ORTEGA",
+    "VALENTE VILLASEÑOR",
+    "JOSE VILLASEÑOR",
+    "RICARDO GIL",
+    "CONNER BROWN",
+    "HAILEY BROWN",
+    "JORGE JIMENEZ",
+    "OMAR VEYTIA",
+    "BRIANNA VEYTIA",
+    "MADY JIMENEZ",
+    "CHRISTIAN",
+    "FRANK BUSTOS",
+    "ROBERTO JACOTT",
+    "FRANKY CARBONERO",
+    "AUDRINA CARBONERO",
+    "SEBASTIAN CARBONERO",
+    "GABY CARBONERO",
+    "DAD",
+    "ARLENE CARBONERO",
+    "ANGELICA CUEVAS",
+    "ANGELICA +1",
+    "ANTONIO OVIEDO",
+    "SRA. OVIEDO",
+    "EMILIANO DERIQUER",
+    "EMILIANO + 1",
+    "MAX VARGAS",
+    "MAX +1",
+    "ALVIN GOMEZ",
+    "ITZEL CALLEROS",
+    "HAIDER AL-JABER",
+    "ALI AL-JABER",
+    "HASSAN AL-JABER",
+    "HASSAN WIFE",
+    "NICKOLAS FERNANDEZ",
+    "MAURICIO ORTIZ",
+    "SHAI ORTIZ",
+    "KEVIN GOMEZ",
+    "KEVIN GOMEZ +1",
+    "ARMANI PRIETO",
+    "PAULINA RAMIREZ",
+    "ARAM OTANEZ",
+    "GUILLERMO CABALLERO",
+    "GUILLERMO CABALLERO +1",
+    "CARLOS DURAN",
+    "CARLOS DURAN WIFE",
+    "JESSE RAMIREZ",
+    "DAKOTA ROBERTSON",
+    "EDER CONTRERAS",
+    "EDER +1",
+    "OZIEL GONZALEZ",
+    "KEVIN ACKERMAN",
+    "VIVIANA ACKERMAN",
+    "IVAN MARMEL",
+    "IVAN + 1",
+    "PATRICIO YRIZAR",
+    "ANDREA GARCIA",
+    "GUILLERMO CARRILLO",
+    "GUILLERMO CARRILLO +1",
+    "TIFFANY VERDUZCO",
+    "OMAR CAMACHO PEREZ",
+    "GASTON BUSTAMANTE",
+    "GASTON BUSTAMANTE +1",
+    "ESTEBAN MELENDEZ",
+    "ANTHONY THUESON",
+    "ANDREA THUESON",
+    "JUAN PABLO BUSTAMANTE",
+    "PAULO KRASOVSKY",
+    "BENJAMIN AGUILAR",
+    "BENJAMIN + 1",
+    "MARTIN TULA",
+    "MARTIN + 1",
+    "HECTOR ZAMORA",
+    "HECTOR +1",
+    "RODRIGO GIRALDEZ",
+    "RODRIGO WIFE",
+
+    //Grupo Alexia
+    "ALEXIA ROCHA",
+    "MARIA DOMINGA LIMÓN",
+    "LAURO ROCHA",
+    "MAURICIO ROCHA",
+    "PATRICIO ROCHA",
+    "ISABEL MASCAREÑO",
+    "LAURO PATRICIO ROCHA",
+    "ISABELLA ROCHA",
+    "CRISTEL ROCHA",
+    "HERNÁN CASTANEDA",
+    "EMMA VICTORIA CASTANEDA",
+    "KENNY LIMÓN TORRES",
+    "KEVIN LIMÓN TORRES",
+    "MARIA FERNANDA LIMÓN",
+    "ALAN RODRIGUEZ",
+    "KRISBEL LIMÓN",
+    "RUBEN LIMÓN",
+    "CIRO MEJIA",
+    "REY MEJIA",
+    "MARIANA CASIAN",
+    "CINDY LIMÓN",
+    "RODÓLFO RAMIREZ",
+    "LISETTE LIMÓN DE ROBLES",
+    "GUSTAVO ROBLES",
+    "JESÚS LIMÓN",
+    "ADRIANA GASTELUM LIMÓN",
+    "LOURDES MÉNDEZ",
+    "FELA OSUNA",
+    "LOLIS LIMÓN",
+    "LILIBEL GIL",
+    "EDUARDO GUARELLO",
+    "ORBELIN GIL",
+    "ERIKA GIL",
+    "IRÁM GIL",
+    "ILSE YESSENIA GIL",
+    "RAUL VILLARREAL",
+    "ESTEFANÍA VILLARREAL",
+    "DIEGO VILLARREAL",
+    "OCTAVIO VILLARREAL",
+    "MARIANA VILLARREAL",
+    "OSCAR VILLARREAL",
+    "RICARDO VILLARREAL",
+    "AMAIRANI LIMÓN",
+    "JAIME LIMÓN",
+    "LAMBERTO LIMÓN",
+    "MIRNA LIMÓN",
+    "CLARISSA LIMÓN",
+    "EMMANUEL PEREZ",
+    "NEREYDA LIMÓN",
+    "SEÑOR ARTURO BOBADILLA",
+    "VANESSA BOBADILLA",
+    "ARTURO BOBADILLA LIMÓN",
+    "CECI GONZALEZ",
+    "DANIEL GONZALEZ",
+    "LETICIA ANGULO",
+    "JOEL ANGULO",
+    "MARIELA LIMÓN",
+    "MIGUEL HERNANDEZ",
+    "DANIELA LIMÓN",
+    "ENRIQUE ROCHA",
+    "ERIKA ROCHA",
+    "ERIKA ELENES",
+    "SOFIA ROCHA",
+    "ROGELIO RAMIREZ",
+    "HICEL RAMIREZ ROCHA",
+    "HUSBERTO REVELES",
+    "LESLIE CHANTEL RAMIREZ",
+    "SEÑORA TAIDE ROCHA",
+    "ERNESTO SILLAS",
+    "LYZ GASTELUM",
+    "MAURICIO SILLAS",
+    "JORGE SILLAS",
+    "VALERIA SILLAS",
+    "ARELI MELENDREZ",
+    "TAIDE SILLAS",
+    "ULISES ARCE",
+    "SILVIA ROCHA",
+    "VERÓNICA TORRES",
+    "SILVIA TORRES",
+    "THOMAS",
+    "EMMANUEL TORRES",
+    "BRITNEY HURTADO",
+    "MAURICIO TORRES",
+    "DARITZA TORRES",
+    "CURTIS",
+    "ASHLEY ROBLES",
+    "LISKELSEY ROBLES",
+    "CAROLINA OVIEDO LASHGARI",
+    "NICO LASHGARI",
+    "COVADONGA ESCALANTE",
+    "EMILIO ROMO",
+    "SARAH SANCHEZ",
+    "SARAH SANCHEZ PLUS ONE",
+    "REBECCA SIFUENTES",
+    "ELIZABETH SIFUENTES",
+    "BRIANNA HERRERA",
+    "LANDON GRANILLO",
+    "LANDON PLUS ONE",
+    "KAILEY WOLF",
+    "HENRY WOLF",
+    "ALEXIS ANDERSON",
+    "REBECCA MUENCH",
+    "SOFÍA MAYER",
+    "ANDRÉS DOMÍNGUEZ",
+    "MICHELLE SMITH",
+    "JENNA CONTRERAS",
+    "MARIO OCHOA",
+    "LETIZIA RIEDEL",
+    "SEÑOR MARIO OCHOA",
+    "PALOMA ALONSO",
+    "VIANNY VALENZUELA",
+    "JESSICA VALENZUELA",
+    "CRISTINA MACÍAS",
+    "DANIELLA RAMIREZ",
+    "QUIQUE FLORES",
+    "ALEJANDRA DÁVILA",
+    "LUPITA LIMÓN",
+    "ALFONSO LIMÓN",
+    "GUADALUPE BARRAGÁN",
+    "POMPEYO BARRAGÁN",
+    "VERÓNICA JOHNSON",
+    "VERÓNICA JOHNSON PLUS ONE",
+    "JUAN BERNAL",
+    "NATALIA SMITH",
+    "SYDNEY RIBOT",
+    "SYDNEY RIBOT PLUS ONE",
+    "ALONDRA LIMÓN",
+    "MOE OTHMAN",
+    "ÁNGEL URETA",
+    "JUAN ALBERTO URETA",
+    "SAMMIE RYAN",
+    "CARMINE RYAN",
+    "ALEJANDRA ROCHA",
+    "MICHAEL LEAL",
+    "MARLENE ORTIZ"
+
+];
+
 // DATOS DE SECCIONES
 const slidesData = [
     { 
-        img: 'https://instagram.ftij3-2.fna.fbcdn.net/v/t1.15752-9/598702897_762076099484941_6162032456382384969_n.jpg?_nc_cat=106&ccb=7-5&_nc_sid=0024fc&_nc_ohc=r_fU_26-IeoQ7kNvwFjYk9c&_nc_oc=AdlzyNi6JPDbI3HMIMw0yxsUn83W6BVHe7n6ZE11f0AwzsKfYYVQoGsSIoS53_DyC-jSIrS2PvQS2QMUPpPia8Ft&_nc_zt=23&_nc_ht=instagram.ftij3-2.fna&oh=03_Q7cD4AHrdx-x6T6E-FVGl9Df1iCHSJKM8HiwDmGXsVU_1t3eAg&oe=69703463', 
+        img: 'alexiajavan.webp', 
         subtitle: { en: 'WELCOME', es: 'BIENVENIDOS' }, 
-        btnText: { en: 'OUR STORY', es: 'NUESTRA HISTORIA' }, 
+        btnText: { en: 'INVITATION', es: 'INVITACIÓN' }, 
         title: { en: 'ALEXIA & JAVAN', es: 'ALEXIA & JAVAN' }, 
         detailsContent: {
-            en: `<p>They say the best loves come when you least expect them. Our story began on an ordinary autumn afternoon, over coffee and nervous laughter that turned into complicity.</p><br><p>Together we have learned that love is not just looking at each other, but looking together in the same direction.</p>`,
-            es: `<p>Dicen que los mejores amores llegan sin avisar. Nuestra historia comenzó una tarde de otoño, entre cafés y risas que se volvieron complicidad.</p><br><p>Juntos hemos aprendido que el amor no es solo mirarse el uno al otro, sino mirar juntos en la misma dirección.</p>`
-        }
-    },
-    { 
-        img: 'https://i.pinimg.com/736x/b2/8c/df/b28cdfecb97da82a8bd56981fe1f8be1.jpg', 
-        subtitle: { en: 'OUR UNION', es: 'NUESTRA UNIÓN' }, 
-        btnText: { en: 'INVITATION', es: 'INVITACIÓN' }, 
-        title: { en: 'WEDDING DAY', es: 'DÍA DE LA BODA' }, 
-        detailsContent: {
-            en: `<p><strong>FRIDAY, SEPTEMBER 11, 2026</strong></p><p>Icebreaker at Casa Pedro Domecq</p><br><p><strong>SATURDAY, SEPTEMBER 12, 2026</strong></p><p>Hotel Andana</p><p>Valle de Guadalupe, B.C.</p><br><p>Ceremony & Reception</p><p>(Times to be confirmed)</p>`,
-            es: `<p><strong>VIERNES 11 DE SEPTIEMBRE, 2026</strong></p><p>Rompehielo en Casa Pedro Domecq</p><br><p><strong>SÁBADO 12 DE SEPTIEMBRE, 2026</strong></p><p>Hotel Andana</p><p>Valle de Guadalupe, B.C.</p><br><p>Ceremonia y Recepción</p><p>(Horarios por confirmar)</p>`
+            en: `In the vast silence of the cosmos, two stars wandered alone—
+            glowing, searching, waiting.</p><br><p>
+
+            Across endless light-years, their paths curved through galaxies,
+            drawn by something unseen, yet certain.
+            Destiny, quietly guiding them toward one another.</p><br><p>
+
+            And when they finally met, the universe paused.</p><br><p>
+
+            Their collision wasn’t destruction—it was creation.<br>
+            From their union, a new galaxy was born
+            full of warmth, rhythm, and eternal light.</p><br><p>
+
+            Two souls, now one constellation,
+            forever illuminating the same sky.</p><br>
+            
+            <p><strong>WELCOME</strong></p><p>Valle de Guadalupe</p><p>September 2026</p><br>
+            
+            <p><strong>FRIDAY, SEPTEMBER 11</strong></p>
+            <p>Icebreaker at Casa Pedro Domecq</p><br>
+            <p><strong>SATURDAY, SEPTEMBER 12</strong>
+            <p>Ceremony & Reception</p>
+            <p>Hotel Andana</p><p>Valle de Guadalupe, B.C.</p><br>`,
+            es: `En el vasto silencio del cosmos, dos estrellas vagaban solas—
+            brillando, buscando, esperando.</p><br><p>
+
+            A través de infinitos años luz, sus caminos se curvaron entre galaxias,
+            atraídas por algo invisible, pero certero.
+            El destino, guiándolas silenciosamente la una hacia la otra.</p><br><p>
+
+            Y cuando finalmente se encontraron, el universo se detuvo.</p><br><p>
+
+            Su colisión no fue destrucción—fue creación.<br>
+            De su unión, nació una nueva galaxia
+            llena de calidez, ritmo y luz eterna.</p><br><p>
+
+            Dos almas, ahora una sola constelación,
+            iluminando por siempre el mismo cielo.</p><br>
+            
+            <p><strong>BIENVENIDOS</strong></p><p>Valle de Guadalupe</p><p>Septiembre 2026</p><br>
+            
+            <p><strong>VIERNES, 11 DE SEPTIEMBRE</strong></p>
+            <p>Rompehielo en Casa Pedro Domecq</p><br>
+            <p><strong>SÁBADO, 12 DE SEPTIEMBRE</strong>
+            <p>Ceremonia y Recepción</p>
+            <p>Hotel Andana</p><p>Valle de Guadalupe, B.C.</p><br>`
         }
     },
     { 
@@ -108,6 +595,40 @@ const slidesData = [
         detailsContent: {
             en: `<p><strong>FRIDAY, SEPT 11</strong></p><p>Details coming soon</p><br><p><strong>SATURDAY, SEPT 12</strong></p><p>Details coming soon</p>`,
             es: `<p><strong>VIERNES 11 SEPT</strong></p><p>Detalles próximamente</p><br><p><strong>SÁBADO 12 SEPT</strong></p><p>Detalles próximamente</p>`
+        }
+    },
+    { 
+        img: 'https://i.pinimg.com/736x/b2/8c/df/b28cdfecb97da82a8bd56981fe1f8be1.jpg', // Una imagen de estilo hotel/habitación luxury
+        subtitle: { en: 'ACCOMMODATIONS', es: 'HOSPEDAJE' }, 
+        btnText: { en: 'WHERE TO STAY', es: 'DÓNDE QUEDARSE' }, 
+        title: { en: 'HOTELS', es: 'HOTELES' }, 
+        detailsContent: {
+            en: `
+                <p>For your comfort, we suggest these nearby options in Valle de Guadalupe:</p><br>
+                <p><strong>HOTEL VALLE REAL (MOCK)</strong></p>
+                <p>Discount Code: ALEXIAYJAVAN</p>
+                <p><a href="#" target="_blank">View Website</a></p><br>
+                
+                <p><strong>BOUTIQUE CIELO VISTA (MOCK)</strong></p>
+                <p>Special Rate for Wedding Guests</p>
+                <p><a href="#" target="_blank">View Website</a></p><br>
+                
+                <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
+                <p><em>* Additional hotels and room blocks to be confirmed soon.</em></p>
+            `,
+            es: `
+                <p>Para su comodidad, les sugerimos estas opciones cercanas en Valle de Guadalupe:</p><br>
+                <p><strong>HOTEL VALLE REAL (MOCK)</strong></p>
+                <p>Código de Descuento: ALEXIAYJAVAN</p>
+                <p><a href="#" target="_blank">Ver Sitio Web</a></p><br>
+                
+                <p><strong>BOUTIQUE CIELO VISTA (MOCK)</strong></p>
+                <p>Tarifa Especial para Invitados</p>
+                <p><a href="#" target="_blank">Ver Sitio Web</a></p><br>
+                
+                <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
+                <p><em>* Más hoteles y bloques de habitaciones por confirmar próximamente.</em></p>
+            `
         }
     },
     {
@@ -155,8 +676,8 @@ const slidesData = [
         btnText: { en: 'VIEW REGISTRY', es: 'VER MESA' }, 
         title: { en: 'REGISTRY', es: 'REGISTRO' }, 
         detailsContent: {
-            en: `<p>Your presence is our present.</p><br><p><a href="#">Liverpool: 123456</a></p><p><a href="#">Amazon Registry</a></p>`,
-            es: `<p>Su presencia es nuestro regalo.</p><br><p><a href="#">Liverpool: 123456</a></p><p><a href="#">Amazon Registry</a></p>`
+            en: `<p><a href="https://www.bloomingdales.com/registry/Alexia-Rocha-Javan-Carbonero/1396114" target="_blank" rel="noopener noreferrer">Bloomingdales</a></p><p><a href="https://www.williams-sonoma.com/registry/vr6t9hmqbh/registry-list.html" target="_blank" rel="noopener noreferrer">Williams Sonoma</a></p>`,
+            es: `<p><a href="https://www.bloomingdales.com/registry/Alexia-Rocha-Javan-Carbonero/1396114" target="_blank" rel="noopener noreferrer">Bloomingdales</a></p><p><a href="https://www.williams-sonoma.com/registry/vr6t9hmqbh/registry-list.html" target="_blank" rel="noopener noreferrer">Williams Sonoma</a></p>`
         }
     },
     { 
@@ -180,7 +701,7 @@ const slidesData = [
 
 // DOM & SWIPER
 const bgLayer = document.getElementById('bg-layer');
-const bgLayerNext = document.getElementById('bg-layer-next'); // ADD THIS LINE
+const bgLayerNext = document.getElementById('bg-layer-next'); 
 const subtitleEl = document.getElementById('subtitle');
 const ctaBtn = document.getElementById('cta-btn');
 const langOpts = document.querySelectorAll('.lang-opt');
@@ -188,7 +709,6 @@ const swiperWrapper = document.getElementById('dynamic-swiper-wrapper');
 const mainHero = document.getElementById('main-hero');
 let swiper = null;
 
-// FUNCION RE-CONSTRUIR SWIPER (LÓGICA LIMPIA)
 function rebuildSwiper(initialIndex = 0) {
     if (swiper !== null) {
         swiper.destroy(true, true);
@@ -199,7 +719,6 @@ function rebuildSwiper(initialIndex = 0) {
     slidesData.forEach(slide => {
         const slideDiv = document.createElement('div');
         slideDiv.className = 'swiper-slide';
-        // HTML interno extra para asegurar centrado vertical/horizontal
         slideDiv.innerHTML = `<div class="slide-inner"><h2 class="slide-title">${slide.title[currentLang]}</h2></div>`;
         swiperWrapper.appendChild(slideDiv);
     });
@@ -213,11 +732,7 @@ function rebuildSwiper(initialIndex = 0) {
         initialSlide: initialIndex,
         mousewheel: true, 
         keyboard: { enabled: true },
-        
-        // CORRECCIÓN PARA CELULARES
-        roundLengths: true, // Evita medios pixeles borrosos
-        
-        // Observers para estabilidad
+        roundLengths: true, 
         observer: true, 
         observeParents: true,
 
@@ -229,9 +744,7 @@ function rebuildSwiper(initialIndex = 0) {
     });
 }
 
-// CARGA INICIAL ANTI-BUG (ESPERA A FUENTES)
 window.addEventListener('load', () => {
-    // Importante: Esperar a que la fuente esté lista para calcular ancho
     document.fonts.ready.then(() => {
         rebuildSwiper(0);
         setTimeout(() => {
@@ -290,22 +803,16 @@ function updateLanguage() {
     }
 }
 
-// UPDATE CONTENT (Background Variable)
 function updateContent(index) {
     const data = slidesData[index];
     if(!data) return;
     
-    // Fade out rápido
     bgLayer.style.opacity = '0';
-    
     subtitleEl.style.opacity = '0';
     ctaBtn.style.opacity = '0';
     
     setTimeout(() => {
-        // Cambiar imagen mientras está invisible
         bgLayer.style.setProperty('--bg-img', `url('${data.img}')`);
-        
-        // Fade in inmediato
         bgLayer.style.opacity = '1';
         
         subtitleEl.textContent = data.subtitle[currentLang];
@@ -313,10 +820,9 @@ function updateContent(index) {
         ctaBtn.setAttribute('href', data.btnLink || '#');
         subtitleEl.style.opacity = '1';
         ctaBtn.style.opacity = '1';
-    }, 400); // Mismo tiempo que la transición CSS
+    }, 400); 
 }
 
-// BOTON RESERVE (HEADER)
 const reserveBtn = document.getElementById('nav-reserve-text');
 if(reserveBtn) {
     reserveBtn.addEventListener('click', (e) => {
@@ -396,12 +902,11 @@ function openDetailsMode(index) {
     nextSectionBar.setAttribute('data-next-index', nextIndex);
 
     if (data.isRSVP) {
-        // ... (Lógica del RSVP se queda igual) ...
         detailBodyText.innerHTML = `
             <div id="rsvp-login-view" class="rsvp-step-container">
                 <p>${t.codePrompt}</p>
                 <label class="rsvp-label">${t.codeLabel}</label>
-                <input type="text" id="rsvp-code-input" class="rsvp-input" placeholder="Ej. BODA2">
+                <input type="text" id="rsvp-code-input" class="rsvp-input" placeholder="Ej. Name Surname">
                 <div id="rsvp-error-msg" class="rsvp-error">${t.codeError}</div>
                 <button id="rsvp-check-btn" class="rsvp-btn">${t.enterBtn}</button>
             </div>
@@ -411,27 +916,19 @@ function openDetailsMode(index) {
         detailBodyText.innerHTML = data.detailsContent[currentLang];
     }
 
-    // =====================================================
-    // AQUÍ ESTÁ EL CAMBIO (Líneas modificadas)
-    // =====================================================
     document.body.classList.add('details-mode');
-    
-    // ANTES: detailsContentBox.classList.remove('expanded');
-    // AHORA: Lo agregamos para que inicie ABIERTO
     detailsContentBox.classList.add('expanded'); 
-
-    // Ajustamos el icono para que muestre "Menos" (-) porque ya está abierto
     detailIcon.classList.remove('fa-plus');
     detailIcon.classList.add('fa-minus');
-
-    // Ajustamos el texto para que diga "CERRAR" porque ya está abierto
     detailToggleText.textContent = t.close;
-    // =====================================================
 
     swiper.keyboard.disable();
     swiper.mousewheel.disable();
 }
 
+// =========================================================
+// LOGICA DE LOGIN: BUSCA CUALQUIER NOMBRE DEL GRUPO
+// =========================================================
 function initRSVPLogin() {
     setTimeout(() => {
         const checkBtn = document.getElementById('rsvp-check-btn');
@@ -440,15 +937,36 @@ function initRSVPLogin() {
         
         if(checkBtn) {
             checkBtn.addEventListener('click', () => {
-                const code = codeInput.value.toUpperCase().trim();
-                let guests = 0;
-                if (code === 'BODA1') guests = 1;
-                else if (code === 'BODA2') guests = 2;
-                else if (code === 'BODA3') guests = 3;
-                else if (code === 'FAMILIA4') guests = 4;
+                let rawCode = codeInput.value;
+                
+                let cleanInput = rawCode
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "") 
+                    .replace(/\s+/g, '')             
+                    .toUpperCase();                  
 
-                if (guests > 0) {
-                    generateRSVPForm(guests);
+                let foundGroup = null;
+
+                for (const key in guestsDB) {
+                    const groupArray = guestsDB[key];
+                    
+                    for (let i = 0; i < groupArray.length; i++) {
+                        let cleanNameInDB = groupArray[i]
+                            .normalize("NFD")
+                            .replace(/[\u0300-\u036f]/g, "")
+                            .replace(/\s+/g, '')
+                            .toUpperCase();
+                            
+                        if (cleanInput === cleanNameInDB) {
+                            foundGroup = groupArray;
+                            break; 
+                        }
+                    }
+                    if (foundGroup) break; 
+                }
+
+                if (foundGroup) {
+                    generateRSVPForm(foundGroup);
                 } else {
                     errorMsg.style.display = 'block';
                     codeInput.style.borderBottom = '1px solid rgb(133, 39, 34)';
@@ -458,21 +976,48 @@ function initRSVPLogin() {
     }, 100);
 }
 
-function generateRSVPForm(count) {
+// =========================================================
+// GENERADOR DE FORMULARIO (CON LÓGICA DE ROMPEHIELO)
+// =========================================================
+function generateRSVPForm(guestNames) {
     const t = translations[currentLang];
+    const count = guestNames.length;
     let formHTML = `<div class="rsvp-step-container"><p>${t.reservedFor} <strong>${count} ${t.seats}</strong></p><br>`;
     
-    for (let i = 1; i <= count; i++) {
+    // Iteramos sobre el Array de nombres
+    guestNames.forEach((name, index) => {
+        let i = index + 1;
+        
+        // Verificamos si este invitado específico está en la lista del Rompehielo
+        let upperName = name.toUpperCase();
+        let isInvitedToIcebreaker = rompehieloVIPs.includes(upperName);
+
         formHTML += `
             <div class="guest-block">
-                <div class="guest-number">${t.guest} ${i}</div>
+                <div class="guest-number">${name}</div> 
+                
                 <label class="rsvp-label">${t.nameLabel}</label>
-                <input type="text" id="name_${i}" class="rsvp-input required-field" placeholder="">
+                <input type="text" id="name_${i}" class="rsvp-input required-field" value="${name}">
+                
                 <label class="rsvp-label">${t.attendingLabel}</label>
                 <div class="radio-group" id="attendance_group_${i}">
                     <label class="radio-label"><input type="radio" name="asistencia_${i}" value="si"> ${t.yes}</label>
                     <label class="radio-label"><input type="radio" name="asistencia_${i}" value="no"> ${t.no}</label>
                 </div>
+        `;
+
+        // SI ESTÁ INVITADO AL ROMPEHIELO, AGREGAMOS ESTA PREGUNTA EXTRA
+        if (isInvitedToIcebreaker) {
+            formHTML += `
+                <label class="rsvp-label">${t.icebreakerLabel}</label>
+                <div class="radio-group" id="icebreaker_group_${i}">
+                    <label class="radio-label"><input type="radio" name="rompehielo_${i}" value="si"> ${t.yes}</label>
+                    <label class="radio-label"><input type="radio" name="rompehielo_${i}" value="no"> ${t.no}</label>
+                </div>
+            `;
+        }
+
+        formHTML += `
                 ${ i === 1 ? `
                 <label class="rsvp-label">${t.emailLabel}</label>
                 <input type="email" id="email_1" class="rsvp-input" placeholder="">
@@ -483,7 +1028,7 @@ function generateRSVPForm(count) {
                 <input type="text" id="diet_${i}" class="rsvp-input" placeholder="${t.none}">
             </div>
         `;
-    }
+    });
     
     formHTML += `
         <div class="guest-block" style="border:none;">
@@ -498,13 +1043,19 @@ function generateRSVPForm(count) {
     
     detailBodyText.innerHTML = formHTML;
 
+    // LÓGICA DE ENVÍO Y VALIDACIÓN
     setTimeout(() => {
         document.getElementById('rsvp-submit-final').addEventListener('click', (e) => {
             const btn = e.target;
             let isValid = true;
-            let formData = { _subject: `New RSVP (${currentLang.toUpperCase()})`, _captcha: "false" };
+            let formData = { _subject: `Wedding RSVP (${currentLang.toUpperCase()})`, _captcha: "false" };
 
-            for (let i = 1; i <= count; i++) {
+            guestNames.forEach((name, index) => {
+                let i = index + 1;
+                let upperName = name.toUpperCase();
+                let isInvitedToIcebreaker = rompehieloVIPs.includes(upperName);
+
+                // Validar Nombre
                 const nameInput = document.getElementById(`name_${i}`);
                 if (!nameInput.value.trim()) {
                     nameInput.classList.add('input-error');
@@ -513,6 +1064,7 @@ function generateRSVPForm(count) {
                     nameInput.classList.remove('input-error');
                 }
 
+                // Validar Asistencia a Boda
                 const radios = document.getElementsByName(`asistencia_${i}`);
                 let radioChecked = false;
                 let asistenciaVal = "Pending";
@@ -530,10 +1082,31 @@ function generateRSVPForm(count) {
                     radioContainer.style.color = "#000";
                 }
 
+                // Validar Asistencia a Rompehielo (SOLO si aplica)
+                if (isInvitedToIcebreaker) {
+                    const iceRadios = document.getElementsByName(`rompehielo_${i}`);
+                    let iceChecked = false;
+                    let iceVal = "Pending";
+                    for (const r of iceRadios) { 
+                        if (r.checked) { 
+                            iceChecked = true; 
+                            iceVal = r.value === 'si' ? 'YES (SI)' : 'NO';
+                        } 
+                    }
+                    const iceContainer = document.getElementById(`icebreaker_group_${i}`).previousElementSibling;
+                    if (!iceChecked) {
+                        iceContainer.style.color = "rgb(133, 39, 34)";
+                        isValid = false;
+                    } else {
+                        iceContainer.style.color = "#000";
+                    }
+                    formData[`Guest_${i}_Icebreaker`] = iceVal;
+                }
+
                 formData[`Guest_${i}_Name`] = nameInput.value;
-                formData[`Guest_${i}_Attending`] = asistenciaVal;
+                formData[`Guest_${i}_Attending_Wedding`] = asistenciaVal;
                 formData[`Guest_${i}_Diet`] = document.getElementById(`diet_${i}`).value || "None";
-            }
+            });
 
             const email1 = document.getElementById('email_1') ? document.getElementById('email_1').value : '';
             const tel1 = document.getElementById('tel_1') ? document.getElementById('tel_1').value : '';
@@ -542,7 +1115,7 @@ function generateRSVPForm(count) {
 
             if(email1) formData["Contact_Email"] = email1;
             if(tel1) formData["Contact_Phone"] = tel1;
-            if(message) formData["Message_For_Couple"] = message;
+            if(message) formData["Message"] = message;
             if(song) formData["Song_Request"] = song;
 
             const warningMsg = document.getElementById('form-warning');
@@ -552,13 +1125,10 @@ function generateRSVPForm(count) {
                 btn.textContent = t.sending;
                 btn.disabled = true;
 
-                fetch("https://formsubmit.co/ajax/madebyslivermx@gmail.com", {
-                    method: "POST",
-                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                    body: JSON.stringify(formData)
-                })
-                .then(response => response.json())
-                .then(data => {
+                // --- MODO DEMO ---
+                console.log("DATOS A ENVIAR (SIMULACIÓN):", formData);
+
+                setTimeout(() => {
                     detailBodyText.innerHTML = `
                         <div style="text-align:center; padding: 40px 0;">
                             <h3 class="story-heading">${t.thankTitle}</h3>
@@ -566,13 +1136,7 @@ function generateRSVPForm(count) {
                             <br><p>${t.seeYou}</p>
                         </div>
                     `;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    btn.textContent = t.errorSend;
-                    btn.disabled = false;
-                    alert("Network error. Please try again.");
-                });
+                }, 1500);
             } else {
                 warningMsg.style.display = 'block';
             }
@@ -629,13 +1193,7 @@ musicBtn.addEventListener('click', () => {
     else { bgMusic.play(); icon.classList.replace('fa-play', 'fa-pause'); isPlaying = true; }
 });
 
-// LOGICA DE VISIBILIDAD (PAUSAR MUSICA AL SALIR)
 document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        bgMusic.pause();
-    } else {
-        if (isPlaying) {
-            bgMusic.play();
-        }
-    }
+    if (document.hidden) { bgMusic.pause(); } 
+    else { if (isPlaying) { bgMusic.play(); } }
 });
