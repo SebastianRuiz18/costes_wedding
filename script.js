@@ -1269,3 +1269,43 @@ document.addEventListener('visibilitychange', () => {
     if (document.hidden) { bgMusic.pause(); } 
     else { if (isPlaying) { bgMusic.play(); } }
 });
+
+// =========================================================
+// LÓGICA DE SWIPE GLOBAL PARA MÓVILES (PANTALLA COMPLETA)
+// =========================================================
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
+
+document.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+}, { passive: true });
+
+document.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    handleGlobalSwipe();
+}, { passive: true });
+
+function handleGlobalSwipe() {
+    // 1. Si está el popup de detalles abierto, no hacemos nada
+    if (document.body.classList.contains('details-mode')) return;
+    
+    // 2. Calculamos qué tanto se movió el dedo
+    const xDiff = touchStartX - touchEndX;
+    const yDiff = touchStartY - touchEndY;
+
+    // 3. Verificamos que el movimiento haya sido horizontal y no vertical (scroll)
+    // y que el arrastre haya sido mayor a 50 pixeles (para no cambiar por accidente)
+    if (Math.abs(xDiff) > Math.abs(yDiff) && Math.abs(xDiff) > 50) {
+        if (xDiff > 0) {
+            // El dedo fue de Derecha a Izquierda (Swipe Left) -> Siguiente sección
+            swiper.slideNext();
+        } else {
+            // El dedo fue de Izquierda a Derecha (Swipe Right) -> Sección anterior
+            swiper.slidePrev();
+        }
+    }
+}
