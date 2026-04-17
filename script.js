@@ -1246,8 +1246,18 @@ function toggleDetailsBox() {
 }
 
 document.addEventListener('click', (e) => {
+    // 🚨 EL FRENO ANTI-BUGS PARA CELULARES:
+    // Si la pantalla es menor a 768px (celular), ignoramos el tap en el fondo.
+    // Así evitamos que al tocar la pantalla por accidente se apaguen las letras.
+    if (window.innerWidth < 768) return;
+
+    // Si está abierta la sección de detalles, no hacemos nada
     if (document.body.classList.contains('details-mode')) return;
+    
+    // Si clickeamos un botón importante, no cambiamos de slide
     if (e.target.closest('#menu-btn-trigger, #nav-reserve-text, #main-logo, #cta-btn, #music-btn, .lang-opt, #menu-overlay, .details-layer')) return;
+    
+    // Si es computadora, revisamos si clickeó izquierda o derecha
     const mid = window.innerWidth / 2;
     if (e.clientX < mid) {
         swiper.slidePrev();
