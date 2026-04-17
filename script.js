@@ -302,7 +302,13 @@ const guestsDB = {
     // GRUPO GGG
     "ALEJANDRAROCHA": ["Alejandra Rocha"],
     // GRUPO HHH
-    "MICHAELLEAL": ["Michael Leal", "Marlene Ortiz"]
+    "MICHAELLEAL": ["Michael Leal", "Marlene Ortiz"],
+
+    //Wedding Planner
+    "MAURICIOKIRSCHNER": ["Mauricio Kirschner"],
+
+    // Extra
+    "RENATANAVARRO": ["Renata Navarro"]
 };
 
 // ==========================================
@@ -1182,10 +1188,18 @@ function generateRSVPForm(guestNames) {
                 btn.textContent = t.sending;
                 btn.disabled = true;
 
-                // --- MODO DEMO ---
-                console.log("DATOS A ENVIAR (SIMULACIÓN):", formData);
-
-                setTimeout(() => {
+                // --- ENVÍO REAL CON FORMSUBMIT (AJAX) ---
+                fetch("https://formsubmit.co/ajax/alexiayjavan@gmail.com", {
+                    method: "POST",
+                    headers: { 
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Mostrar mensaje de agradecimiento si se envió con éxito
                     detailBodyText.innerHTML = `
                         <div style="text-align:center; padding: 40px 0;">
                             <h3 class="story-heading">${t.thankTitle}</h3>
@@ -1193,7 +1207,15 @@ function generateRSVPForm(guestNames) {
                             <br><p>${t.seeYou}</p>
                         </div>
                     `;
-                }, 1500);
+                })
+                .catch(error => {
+                    // Si falla el internet o algo sale mal
+                    console.error("Error enviando:", error);
+                    warningMsg.textContent = t.errorSend || "Ocurrió un error al enviar. Por favor intenta de nuevo.";
+                    warningMsg.style.display = 'block';
+                    btn.textContent = t.sendBtn; // Regresa el botón a su estado original
+                    btn.disabled = false;
+                });
             } else {
                 warningMsg.style.display = 'block';
             }
