@@ -534,7 +534,7 @@ const rompehieloVIPs = [
 // DATOS DE SECCIONES
 const slidesData = [
     { 
-        img: 'Upscaled.webp', 
+        img: 'alexiayjavan.webp', 
         subtitle: { en: 'WELCOME', es: 'BIENVENIDOS' }, 
         btnText: { en: 'INVITATION', es: 'INVITACIÓN' }, 
         title: { en: 'ALEXIA & JAVAN', es: 'ALEXIA & JAVAN' }, 
@@ -588,7 +588,7 @@ const slidesData = [
         }
     },
     { 
-        img: 'https://i.pinimg.com/1200x/35/f5/85/35f585356c793224669a8fe751e09d14.jpg', 
+        img: 'Itinerary.webp', 
         subtitle: { en: 'THE BIG DAY', es: 'EL GRAN DÍA' }, 
         btnText: { en: 'VIEW SCHEDULE', es: 'VER HORARIOS' }, 
         title: { en: 'ITINERARY', es: 'ITINERARIO' }, 
@@ -614,24 +614,24 @@ const slidesData = [
             es: `<p><strong>VIERNES, SEPT 11</strong></p><br>
             <p><strong>Fiesta de Bienvenida</strong></p>
             <p><strong>Ubicación:</strong> Casa Pedro Domecq | Valle de Guadalupe</p>
-            <p><strong>Hora:</strong> To be determined</p>
+            <p><strong>Horario:</strong> Por confirmar</p>
             <p><strong>Codigo de Vestimenta:</strong> Cocktail Style</p><br>
 
             <p><strong>SABADO, SEPT 12</strong></p><br>
-            <p><strong>Ceremonia de Boda</strong></p>
+            <p><strong>Ceremonia Religiosa</strong></p>
             <p><strong>Ubicación:</strong> Hotel Andana | Valle de Guadalupe</p>
-            <p><strong>Hora:</strong> To be determined</p>
+            <p><strong>Horario:</strong> Por confirmar</p>
             <p><strong>Codigo de Vestimenta:</strong> Black Tie</p><br>
 
             <p><strong>Recepción</strong></p>
             <p><strong>Ubicación:</strong> Hotel Andana | Valle de Guadalupe</p>
-            <p><strong>Hora:</strong> To be determined</p>
+            <p><strong>Horario:</strong> Por confirmar</p>
             <p><strong>Codigo de Vestimenta:</strong> Black Tie</p><br>
             `
         }
     },
     { 
-        img: 'https://i.pinimg.com/736x/b2/8c/df/b28cdfecb97da82a8bd56981fe1f8be1.jpg', // Una imagen de estilo hotel/habitación luxury
+        img: 'Hotels.webp', // Una imagen de estilo hotel/habitación luxury
         subtitle: { en: 'ACCOMMODATIONS', es: 'HOSPEDAJE' }, 
         btnText: { en: 'WHERE TO STAY', es: 'DÓNDE QUEDARSE' }, 
         title: { en: 'HOTELS', es: 'HOTELES' }, 
@@ -704,7 +704,9 @@ const slidesData = [
                 <br><br>
                 <h3>CHEF JAVIER PLASCENCIA</h3>
                 <br>
-                <p>It is a true privilege for us to share the artistry of Chef Javier Plascencia, one of the most iconic figures in contemporary Mexican cuisine. The same brilliance that earned his restaurant, Animalón, a Michelin star will be brought to our table to offer a world-class culinary experience.</p>
+                <p>It is a true privilege for us to share the artistry of Chef Javier Plascencia, one of the most iconic figures in contemporary Mexican cuisine.</p>
+                <br>
+                <p>The same brilliance that earned his restaurant, Animalón, a Michelin star will be brought to our table to offer a world-class culinary experience.</p>
                 <br>
                 <p>With a proposal that pays tribute to the richness of Baja California and the natural cycles of the land, Javier has designed a seasonal banquet that goes beyond the conventional.</p>
                 <br>
@@ -726,7 +728,7 @@ const slidesData = [
         }
     },
     { 
-        img: 'https://i.pinimg.com/736x/14/80/b5/1480b5c46a6669798b3a832a08de7317.jpg', 
+        img: 'Information.webp', 
         subtitle: { en: 'IMPORTANT DETAILS', es: 'DETALLES IMPORTANTES' }, 
         btnText: { en: 'GUEST GUIDE', es: 'GUÍA DEL INVITADO' }, 
         title: { en: 'INFORMATION', es: 'INFORMACIÓN' }, 
@@ -736,7 +738,7 @@ const slidesData = [
         }
     },
     { 
-        img: 'https://i.pinimg.com/1200x/54/bb/56/54bb56f50739e31d3b6286ef54409aa3.jpg', 
+        img: 'Registry.webp', 
         subtitle: { en: 'A DETAIL', es: 'UN DETALLE' }, 
         btnText: { en: 'VIEW REGISTRY', es: 'VER MESA' }, 
         title: { en: 'REGISTRY', es: 'MESA DE REGALOS' }, 
@@ -746,14 +748,14 @@ const slidesData = [
         }
     },
     { 
-        img: 'https://i.pinimg.com/1200x/4c/9a/69/4c9a69429e1e94c6b2c20d697a29fd7e.jpg', 
+        img: 'RSVP.webp', 
         subtitle: { en: 'RSVP', es: 'CONFIRMA ASISTENCIA' }, 
         btnText: { en: 'JOIN US', es: 'SER PARTE' }, 
         title: { en: 'RSVP', es: 'RSVP' }, 
         isRSVP: true
     },
     { 
-        img: 'https://i.pinimg.com/1200x/4b/5b/ca/4b5bcac80dfb4b6bdf23fdb1d800806e.jpg', 
+        img: 'Contact.webp', 
         subtitle: { en: 'QUESTIONS?', es: '¿TIENES DUDAS?' }, 
         btnText: { en: 'WRITE US', es: 'ESCRIBIRNOS' }, 
         title: { en: 'CONTACT', es: 'CONTACTO' }, 

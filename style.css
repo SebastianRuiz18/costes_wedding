@@ -125,7 +125,7 @@ body.details-mode .details-container { opacity: 1; transform: translateY(0); }
 #detail-body-text, #detail-body-text p { color: #000 !important; font-family: 'DidotTitlePro', serif; font-size: 1.1rem; line-height: 1.6; font-weight: normal; text-shadow: none; text-transform: none; }
 #detail-body-text a { color: #000; text-decoration: underline; }
 
-.back-btn { margin-top: 15px; background: none; border: none; color: #FFF; font-family: 'FuturaBookPro', sans-serif; font-size: 0.7rem; letter-spacing: 2px; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.5s; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+.back-btn { margin-top: 15px; background: none; border: none; color: #FFF; font-family: 'FuturaBookPro', sans-serif; font-size: 1rem; letter-spacing: 2px; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.5s; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
 body.details-mode .back-btn { opacity: 0.8; pointer-events: auto; }
 body.details-mode .back-btn:hover { opacity: 1; text-decoration: underline; }
 
