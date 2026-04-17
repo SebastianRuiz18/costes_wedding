@@ -534,7 +534,7 @@ const rompehieloVIPs = [
 // DATOS DE SECCIONES
 const slidesData = [
     { 
-        img: 'alexiajavan.webp', 
+        img: 'Upscaled.webp', 
         subtitle: { en: 'WELCOME', es: 'BIENVENIDOS' }, 
         btnText: { en: 'INVITATION', es: 'INVITACIÓN' }, 
         title: { en: 'ALEXIA & JAVAN', es: 'ALEXIA & JAVAN' }, 
@@ -959,7 +959,7 @@ ctaBtn.addEventListener('click', (e) => { e.preventDefault(); openDetailsMode(sw
 function openDetailsMode(index) {
     // FRENO ANTI-BUGS: Si el índice llega vacío o no existe en los datos, cancelamos la acción.
     if (index === undefined || isNaN(index) || !slidesData[index]) return;
-    
+
     const data = slidesData[index];
     const t = translations[currentLang];
     
