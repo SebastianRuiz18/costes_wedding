@@ -593,8 +593,41 @@ const slidesData = [
         btnText: { en: 'VIEW SCHEDULE', es: 'VER HORARIOS' }, 
         title: { en: 'ITINERARY', es: 'ITINERARIO' }, 
         detailsContent: {
-            en: `<p><strong>FRIDAY, SEPT 11</strong></p><p>Details coming soon</p><br><p><strong>SATURDAY, SEPT 12</strong></p><p>Details coming soon</p>`,
-            es: `<p><strong>VIERNES 11 SEPT</strong></p><p>Detalles próximamente</p><br><p><strong>SÁBADO 12 SEPT</strong></p><p>Detalles próximamente</p>`
+            en: `<p><strong>FRIDAY, SEPT 11</strong></p><br>
+            <p><strong>Opening Night Welcome Party</strong></p>
+            <p><strong>Location:</strong> Casa Pedro Domecq | Valle de Guadalupe</p>
+            <p><strong>Time:</strong> To be determined</p>
+            <p><strong>Dress Code:</strong> Cocktail Style</p><br>
+
+            <p><strong>SATURDAY, SEPT 12</strong></p><br>
+            <p><strong>Mass Ceremony</strong></p>
+            <p><strong>Location:</strong> Hotel Andana | Valle de Guadalupe</p>
+            <p><strong>Time:</strong> To be determined</p>
+            <p><strong>Dress Code:</strong> Black Tie</p><br>
+
+            <p><strong>Reception</strong></p>
+            <p><strong>Location:</strong> Hotel Andana | Valle de Guadalupe</p>
+            <p><strong>Time:</strong> To be determined</p>
+            <p><strong>Dress Code:</strong> Black Tie</p><br>
+            
+            `,
+            es: `<p><strong>VIERNES, SEPT 11</strong></p><br>
+            <p><strong>Fiesta de Bienvenida</strong></p>
+            <p><strong>Ubicación:</strong> Casa Pedro Domecq | Valle de Guadalupe</p>
+            <p><strong>Hora:</strong> To be determined</p>
+            <p><strong>Codigo de Vestimenta:</strong> Cocktail Style</p><br>
+
+            <p><strong>SABADO, SEPT 12</strong></p><br>
+            <p><strong>Ceremonia de Boda</strong></p>
+            <p><strong>Ubicación:</strong> Hotel Andana | Valle de Guadalupe</p>
+            <p><strong>Hora:</strong> To be determined</p>
+            <p><strong>Codigo de Vestimenta:</strong> Black Tie</p><br>
+
+            <p><strong>Recepción</strong></p>
+            <p><strong>Ubicación:</strong> Hotel Andana | Valle de Guadalupe</p>
+            <p><strong>Hora:</strong> To be determined</p>
+            <p><strong>Codigo de Vestimenta:</strong> Black Tie</p><br>
+            `
         }
     },
     { 
@@ -605,58 +638,90 @@ const slidesData = [
         detailsContent: {
             en: `
                 <p>For your comfort, we suggest these nearby options in Valle de Guadalupe:</p><br>
-                <p><strong>HOTEL VALLE REAL (MOCK)</strong></p>
-                <p>Discount Code: ALEXIAYJAVAN</p>
-                <p><a href="#" target="_blank">View Website</a></p><br>
+
+                <img src="HotelAndana.jpg" class="chef-photo" alt="Hotel Andana">
+                <br><br>
+                <p><strong>HOTEL ANDANA</strong></p>
+                <p>Set in the heart of Valle de Guadalupe, Hotel Andana will serve as the setting for our wedding weekend.<br>
+                For the privacy and intimacy of our celebration, the property has been exclusively reserved for our invited guests.
+                Kindly note this will be an adults-only weekend.</p>
+                <p><a href="https://hotelandana.com/" target="_blank">View Website</a></p><br>
                 
-                <p><strong>BOUTIQUE CIELO VISTA (MOCK)</strong></p>
-                <p>Special Rate for Wedding Guests</p>
-                <p><a href="#" target="_blank">View Website</a></p><br>
-                
-                <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
-                <p><em>* Additional hotels and room blocks to be confirmed soon.</em></p>
+                <img src="HotelBruma.jpg" class="chef-photo" alt="Bruma Wine Resort">
+                <br><br>
+                <p><strong>BRUMA WINE RESORT</strong></p>
+                <p>Nestled within the landscape of Valle de Guadalupe, Bruma Wine Resort offers a refined escape where contemporary design meets nature. <br>
+                Known for its serene atmosphere and curated culinary experiences, it is a perfect choice for guests looking to immerse themselves in the essence of the valley.</p>
+                <p><a href="https://www.brumawineresort.com/" target="_blank">View Website</a></p><br>
+
+                <img src="HotelLosOlivos.jpg" class="chef-photo" alt="Los Olivos">
+                <br><br>
+                <p><strong>HACIENDA LOS OLIVOS</strong></p>
+                <p>Set amidst the vineyards of Valle de Guadalupe, Hacienda Los Olivos offers a charming and intimate stay, blending traditional architecture with the natural beauty of the region.<br>
+                A tranquil retreat just minutes from Hotel Andana, ideal for guests seeking a more private and relaxed experience.</p>
+                <p><a href="https://www.brumawineresort.com/" target="_blank">View Website</a></p><br>
             `,
             es: `
                 <p>Para su comodidad, les sugerimos estas opciones cercanas en Valle de Guadalupe:</p><br>
-                <p><strong>HOTEL VALLE REAL (MOCK)</strong></p>
-                <p>Código de Descuento: ALEXIAYJAVAN</p>
-                <p><a href="#" target="_blank">Ver Sitio Web</a></p><br>
+
+                <img src="HotelAndana.jpg" class="chef-photo" alt="Hotel Andana">
+                <br><br>
+                <p><strong>HOTEL ANDANA</strong></p>
+
+                Ubicado en el corazón del Valle de Guadalupe, Hotel Andana será el escenario de nuestro fin de semana de celebración. <br>
+
+                Por la privacidad de este momento, el hotel ha sido reservado exclusivamente para nuestros invitados.
+                Agradecemos considerar que será una celebración solo para adultos.
+                </p>
+                <p><a href="https://hotelandana.com/" target="_blank">View Website</a></p><br>
                 
-                <p><strong>BOUTIQUE CIELO VISTA (MOCK)</strong></p>
-                <p>Tarifa Especial para Invitados</p>
-                <p><a href="#" target="_blank">Ver Sitio Web</a></p><br>
-                
-                <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
-                <p><em>* Más hoteles y bloques de habitaciones por confirmar próximamente.</em></p>
+                <img src="HotelBruma.jpg" class="chef-photo" alt="Bruma Wine Resort">
+                <br><br>
+                <p><strong>BRUMA WINE RESORT</strong></p>
+                <p>Bruma Wine Resort ofrece una escapada refinada donde el diseño contemporáneo se encuentra con la naturaleza. <br>
+                Reconocido por su atmósfera serena y sus experiencias culinarias cuidadosamente curadas, es una opción ideal para quienes desean sumergirse en la esencia del valle.</p>
+                <p><a href="https://www.brumawineresort.com/" target="_blank">View Website</a></p><br>
+
+                <img src="HotelLosOlivos.jpg" class="chef-photo" alt="Los Olivos">
+                <br><br>
+                <p><strong>HACIENDA LOS OLIVOS</strong></p>
+                <p>Rodeada de viñedos en el Valle de Guadalupe, Hacienda Los Olivos ofrece una estancia íntima, a pocos minutos de Hotel Andana.<br>
+                Ideal para quienes buscan una experiencia más privada y relajada.</p>
+                <p><a href="https://www.brumawineresort.com/" target="_blank">View Website</a></p><br>                
             `
         }
     },
     {
         // SECCIÓN CULINARY
-        img: 'https://i.pinimg.com/1200x/27/9d/9c/279d9cab577f601a2f1c7c26a825410b.jpg', 
+        img: 'Catering.jpg', 
         subtitle: { en: 'CULINARY EXPERIENCE', es: 'EXPERIENCIA CULINARIA' }, 
         btnText: { en: 'MEET THE CHEF', es: 'CONOCE AL CHEF' }, 
         title: { en: 'CATERING', es: 'BANQUETE' }, 
         detailsContent: {
-            en: `
+            en:`
             <div class="chef-container">
-                <img src="https://img-sandiegored.buscafs.com/335492/335492_1152x1152.jpg" class="chef-photo" alt="Chef Javier Plascencia">
+                <img src="Chef.webp" class="chef-photo" alt="Chef Javier Plascencia">
                 <br><br>
-                <h3>JAVIER PLASCENCIA</h3>
+                <h3>CHEF JAVIER PLASCENCIA</h3>
                 <br>
-                <p>We are honored to have the renowned Chef Javier Plascencia leading our culinary experience. Known as the soul of "Baja Med" cuisine, he is a true ambassador of Baja California's flavors.</p>
+                <p>It is a true privilege for us to share the artistry of Chef Javier Plascencia, one of the most iconic figures in contemporary Mexican cuisine. The same brilliance that earned his restaurant, Animalón, a Michelin star will be brought to our table to offer a world-class culinary experience.</p>
                 <br>
-                <p>Prepare your senses for an unforgettable dining journey combining fresh local ingredients with Mediterranean techniques under the stars.</p>
-            </div>`,
+                <p>With a proposal that pays tribute to the richness of Baja California and the natural cycles of the land, Javier has designed a seasonal banquet that goes beyond the conventional.</p>
+                <br>
+                <p>As a gesture of our affection and to express how much we value you being a part of our great day, we have prepared this table where the excellence of an internationally renowned chef will transform our wedding into an unforgettable memory.</p>
+            </div>`, 
+            
             es: `
             <div class="chef-container">
-                <img src="https://img-sandiegored.buscafs.com/335492/335492_1152x1152.jpg" class="chef-photo" alt="Chef Javier Plascencia">
+                <img src="Chef.webp" class="chef-photo" alt="Chef Javier Plascencia">
                 <br><br>
-                <h3>JAVIER PLASCENCIA</h3>
+                <h3>CHEF JAVIER PLASCENCIA</h3>
                 <br>
-                <p>Nos sentimos honrados de contar con el reconocido Chef Javier Plascencia a cargo de nuestra experiencia culinaria. Conocido como el alma de la cocina "Baja Med", es un verdadero embajador de los sabores de Baja California.</p>
+                <p>Es un privilegio para nosotros enriquecer nuestra celebración con la maestría de Chef Javier Plascencia, una de las figuras más emblemáticas de la gastronomía mexicana contemporánea. Su genialidad, que ha llevado a Animalón a ser reconocido con una estrella Michelin, se traslada a nuestra mesa para ofrecernos una experiencia culinaria de clase mundial.</p>
                 <br>
-                <p>Preparen sus sentidos para un viaje gastronómico inolvidable que combina ingredientes locales frescos con técnicas mediterráneas bajo las estrellas.</p>
+                <p>Con una propuesta que rinde tributo a la riqueza de Baja California y a los ciclos de la tierra, Javier ha diseñado un banquete estacional que trasciende lo convencional.</p>
+                <br>
+                <p>Como un gesto de nuestro afecto y para expresar lo mucho que valoramos que sean parte de nuestro gran día, hemos preparado esta mesa donde la cocina de un chef de renombre internacional transformará nuestra boda en un recuerdo inolvidable.</p>
             </div>`
         }
     },
@@ -666,15 +731,15 @@ const slidesData = [
         btnText: { en: 'GUEST GUIDE', es: 'GUÍA DEL INVITADO' }, 
         title: { en: 'INFORMATION', es: 'INFORMACIÓN' }, 
         detailsContent: {
-            en: `<p><strong>DRESS CODE</strong></p><p>Black Tie</p><br><p><strong>CHILDREN</strong></p><p>Adults only event.</p>`,
-            es: `<p><strong>CÓDIGO DE VESTIMENTA</strong></p><p>Etiqueta Rigurosa</p><br><p><strong>NIÑOS</strong></p><p>Evento solo para adultos.</p>`
+            en: `<p>CHILDREN - Adults ONLY Weekend</p>`,
+            es: `<p>NIÑOS - Fin de Semana SOLO para Adultos</p>`
         }
     },
     { 
         img: 'https://i.pinimg.com/1200x/54/bb/56/54bb56f50739e31d3b6286ef54409aa3.jpg', 
         subtitle: { en: 'A DETAIL', es: 'UN DETALLE' }, 
         btnText: { en: 'VIEW REGISTRY', es: 'VER MESA' }, 
-        title: { en: 'REGISTRY', es: 'REGISTRO' }, 
+        title: { en: 'REGISTRY', es: 'MESA DE REGALOS' }, 
         detailsContent: {
             en: `<p><a href="https://www.bloomingdales.com/registry/Alexia-Rocha-Javan-Carbonero/1396114" target="_blank" rel="noopener noreferrer">Bloomingdales</a></p><p><a href="https://www.williams-sonoma.com/registry/vr6t9hmqbh/registry-list.html" target="_blank" rel="noopener noreferrer">Williams Sonoma</a></p>`,
             es: `<p><a href="https://www.bloomingdales.com/registry/Alexia-Rocha-Javan-Carbonero/1396114" target="_blank" rel="noopener noreferrer">Bloomingdales</a></p><p><a href="https://www.williams-sonoma.com/registry/vr6t9hmqbh/registry-list.html" target="_blank" rel="noopener noreferrer">Williams Sonoma</a></p>`
@@ -683,7 +748,7 @@ const slidesData = [
     { 
         img: 'https://i.pinimg.com/1200x/4c/9a/69/4c9a69429e1e94c6b2c20d697a29fd7e.jpg', 
         subtitle: { en: 'RSVP', es: 'CONFIRMA ASISTENCIA' }, 
-        btnText: { en: 'RESERVE SPOT', es: 'RESERVAR LUGAR' }, 
+        btnText: { en: 'JOIN US', es: 'SER PARTE' }, 
         title: { en: 'RSVP', es: 'RSVP' }, 
         isRSVP: true
     },
@@ -693,9 +758,10 @@ const slidesData = [
         btnText: { en: 'WRITE US', es: 'ESCRIBIRNOS' }, 
         title: { en: 'CONTACT', es: 'CONTACTO' }, 
         detailsContent: {
-            en: `<p>Wedding Planner: Ana (555-123-4567)</p><p>Email: alexiayjavan@gmail.com</p>`,
-            es: `<p>Wedding Planner: Ana (555-123-4567)</p><p>Email: alexiayjavan@gmail.com</p>`
+            en: `<p><a href="mailto:alexiayjavan@gmail.com" style="text-decoration: none; color: inherit;">alexiayjavan@gmail.com</a></p>`,
+            es: `<p><a href="mailto:alexiayjavan@gmail.com" style="text-decoration: none; color: inherit;">alexiayjavan@gmail.com</a></p>`
         }
+
     }
 ];
 
@@ -735,7 +801,9 @@ function rebuildSwiper(initialIndex = 0) {
         roundLengths: true, 
         observer: true, 
         observeParents: true,
-
+        touchEventsTarget: 'container',      // ← AGREGA ESTA
+        preventClicks: false,                // ← AGREGA ESTA
+        preventClicksPropagation: false,     // ← AGREGA ESTA
         breakpoints: { 320: { spaceBetween: 20 }, 768: { spaceBetween: 50 } },
         on: {
             init: function () { updateContent(this.realIndex); },
@@ -1177,12 +1245,16 @@ function toggleDetailsBox() {
     }
 }
 
-const leftZone = document.getElementById('nav-left');
-const rightZone = document.getElementById('nav-right');
-if (leftZone && rightZone) {
-    leftZone.addEventListener('click', () => { if(!document.body.classList.contains('details-mode')) swiper.slidePrev(); });
-    rightZone.addEventListener('click', () => { if(!document.body.classList.contains('details-mode')) swiper.slideNext(); });
-}
+document.addEventListener('click', (e) => {
+    if (document.body.classList.contains('details-mode')) return;
+    if (e.target.closest('#menu-btn-trigger, #nav-reserve-text, #main-logo, #cta-btn, #music-btn, .lang-opt, #menu-overlay, .details-layer')) return;
+    const mid = window.innerWidth / 2;
+    if (e.clientX < mid) {
+        swiper.slidePrev();
+    } else {
+        swiper.slideNext();
+    }
+});
 
 const musicBtn = document.getElementById('music-btn');
 const bgMusic = document.getElementById('bg-music');
