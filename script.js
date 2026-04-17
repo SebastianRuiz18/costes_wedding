@@ -957,6 +957,9 @@ const nextSectionTitle = document.getElementById('next-section-title');
 ctaBtn.addEventListener('click', (e) => { e.preventDefault(); openDetailsMode(swiper.activeIndex); });
 
 function openDetailsMode(index) {
+    // FRENO ANTI-BUGS: Si el índice llega vacío o no existe en los datos, cancelamos la acción.
+    if (index === undefined || isNaN(index) || !slidesData[index]) return;
+    
     const data = slidesData[index];
     const t = translations[currentLang];
     
@@ -1220,7 +1223,11 @@ function closeDetailsMode() {
 }
 
 nextSectionBar.addEventListener('click', () => {
-    const nextIndex = parseInt(nextSectionBar.getAttribute('data-next-index'));
+    let nextIndex = parseInt(nextSectionBar.getAttribute('data-next-index'), 10);
+    
+    // FRENO: Si por alguna razón el índice se pierde, no hacemos nada para evitar el bug
+    if (isNaN(nextIndex)) return; 
+    
     swiper.slideTo(nextIndex);
     openDetailsMode(nextIndex);
 });
