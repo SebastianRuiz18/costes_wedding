@@ -562,23 +562,7 @@ const slidesData = [
             <p><strong>SATURDAY, SEPTEMBER 12</strong>
             <p>Ceremony & Reception</p>
             <p>Hotel Andana</p><p>Valle de Guadalupe, B.C.</p><br>`,
-            es: `En el vasto silencio del cosmos, dos estrellas vagaban solas—
-            brillando, buscando, esperando.</p><br><p>
-
-            A través de infinitos años luz, sus caminos se curvaron entre galaxias,
-            atraídas por algo invisible, pero certero.
-            El destino, guiándolas silenciosamente la una hacia la otra.</p><br><p>
-
-            Y cuando finalmente se encontraron, el universo se detuvo.</p><br><p>
-
-            Su colisión no fue destrucción—fue creación.<br>
-            De su unión, nació una nueva galaxia
-            llena de calidez, ritmo y luz eterna.</p><br><p>
-
-            Dos almas, ahora una sola constelación,
-            iluminando por siempre el mismo cielo.</p><br>
-            
-            <p><strong>BIENVENIDOS</strong></p><p>Valle de Guadalupe</p><p>Septiembre 2026</p><br>
+            es: `<p><strong>BIENVENIDOS</strong></p><p>Valle de Guadalupe</p><p>Septiembre 2026</p><br>
             
             <p><strong>VIERNES, 11 DE SEPTIEMBRE</strong></p>
             <p>Rompehielo en Casa Pedro Domecq</p><br>
@@ -621,12 +605,12 @@ const slidesData = [
             <p><strong>Ceremonia Religiosa</strong></p>
             <p><strong>Ubicación:</strong> Hotel Andana | Valle de Guadalupe</p>
             <p><strong>Horario:</strong> Por confirmar</p>
-            <p><strong>Codigo de Vestimenta:</strong> Black Tie</p><br>
+            <p><strong>Codigo de Vestimenta:</strong> Etiqueta Rigurosa</p><br>
 
             <p><strong>Recepción</strong></p>
             <p><strong>Ubicación:</strong> Hotel Andana | Valle de Guadalupe</p>
             <p><strong>Horario:</strong> Por confirmar</p>
-            <p><strong>Codigo de Vestimenta:</strong> Black Tie</p><br>
+            <p><strong>Codigo de Vestimenta:</strong> Etiqueta Rigurosa</p><br>
             `
         }
     },
