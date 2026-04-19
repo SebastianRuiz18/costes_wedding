@@ -81,239 +81,365 @@ const translations = {
 };
 
 // ==========================================
-// BASE DE DATOS DE INVITADOS
+// BASE DE DATOS DE INVITADOS (INDIVIDUALES Y +1)
 // ==========================================
 const guestsDB = {
+    // ==========================================
     // INVITADOS JAVAN (Novio)
-    // GRUPO A
+    // ==========================================
     "CLAUDIAJIMENEZ": ["Claudia Jimenez", "Mom +1"],
-    // GRUPO B
-    "SILVIAARANGURE": ["Silvia Arangure", "Sara Arangure", "Abue Alba Arangure"],
-    // GRUPO C
-    "PRIZILACARBONERO": ["Prizila Carbonero de Rojas", "Omar Rojas"],
-    // GRUPO D
-    "MAYACARBONERO": ["Maya Carbonero", "Stevie Ortega"],
-    // GRUPO F 
-    "VALENTEVILLASENOR": ["Valente Villaseñor", "Jose Villaseñor"],
-    // GRUPO G
+    
+    "SILVIAARANGURE": ["Silvia Arangure"],
+    "SARAARANGURE": ["Sara Arangure"],
+    "ABUEALBAARANGURE": ["Abue Alba Arangure"],
+    
+    "PRIZILACARBONERODEROJAS": ["Prizila Carbonero de Rojas"],
+    "OMARROJAS": ["Omar Rojas"],
+    
+    "MAYACARBONERO": ["Maya Carbonero"],
+    "STEVIEORTEGA": ["Stevie Ortega"],
+    
+    "VALENTEVILLASENOR": ["Valente Villaseñor"],
+    "JOSEVILLASENOR": ["Jose Villaseñor"],
+    
     "RICARDOGIL": ["Ricardo Gil"],
-    // GRUPO H
-    "CONNERBROWN": ["Conner Brown", "Hailey Brown"],
-    // GRUPO J
+    
+    "CONNERBROWN": ["Conner Brown"],
+    "HAILEYBROWN": ["Hailey Brown"],
+    
     "JORGEJIMENEZ": ["Jorge Jimenez"],
-    // GRUPO K
-    "OMARVEYTIA": ["Omar Veytia", "Brianna Veytia"],
-    // GRUPO L
-    "MADYJIMENEZ": ["Mady Jimenez", "Christian"],
-    // GRUPO M
+    
+    "OMARVEYTIA": ["Omar Veytia"],
+    "BRIANNAVEYTIA": ["Brianna Veytia"],
+    
+    "MADYJIMENEZ": ["Mady Jimenez"],
+    "CHRISTIAN": ["Christian"],
+    
     "FRANKBUSTOS": ["Frank Bustos"],
-    // GRUPO N
-    "ROBERTOJACOTT": ["Roberto Jacott", "Luz Mariel Jacott", "Luz Jacott +1"],
-    // GRUPO O
-    "MARIOROJAS": ["Mario Rojas", "Claudia Rojas"],
-    // GRUPO P
-    "ABUELITAELIZABETH": ["Abuelita Elizabeth", "Christian Carbonero", "Tasha Carbonero", "Franky Carbonero", "Audrina Carbonero"],
-    // GRUPO Q
-    "ALEJANDROCARBONERO": ["Alejandro Carbonero", "Cristina Carbonero", "Sebastian Carbonero", "Gaby Carbonero"],
-    // GRUPO R
-    "DAD": ["Dad", "Arlene Carbonero"],
-    // GRUPO S
+    
+    "ROBERTOJACOTT": ["Roberto Jacott"],
+    "LUZMARIELJACOTT": ["Luz Mariel Jacott", "Luz Jacott +1"],
+    
+    "MARIOROJAS": ["Mario Rojas"],
+    "CLAUDIAROJAS": ["Claudia Rojas"],
+    
+    "ABUELITAELIZABETH": ["Abuelita Elizabeth"],
+    "CHRISTIANCARBONERO": ["Christian Carbonero"],
+    "TASHACARBONERO": ["Tasha Carbonero"],
+    "FRANKYCARBONERO": ["Franky Carbonero"],
+    "AUDRINACARBONERO": ["Audrina Carbonero"],
+    
+    "ALEJANDROCARBONERO": ["Alejandro Carbonero"],
+    "CRISTINACARBONERO": ["Cristina Carbonero"],
+    "SEBASTIANCARBONERO": ["Sebastian Carbonero"],
+    "GABYCARBONERO": ["Gaby Carbonero"],
+    
+    "DAD": ["Dad"],
+    "ARLENECARBONERO": ["Arlene Carbonero"],
+    
     "ANGELICACUEVAS": ["Angelica Cuevas", "Angelica +1"],
-    // GRUPO T
-    "ANTONIOOVIEDO": ["Antonio Oviedo", "Sra. Oviedo"],
-    // GRUPO U
-    "ALFONSODELGADILLO": ["Alfonso Delgadillo", "Kritzia Delgadillo"],
-    // GRUPO V
-    "YOLANDADERIQUER": ["Yolanda Deriquer", "Emiliano Deriquer", "Emiliano + 1"],
-    // GRUPO W
-    "LETICIAGONGORA": ["Leticia Gongora", "Max Vargas", "Max +1"],
-    // GRUPO X
-    "ALVINGOMEZ": ["Alvin Gomez", "Itzel Calleros"],
-    // GRUPO Y
-    "HAIDERAL-JABER": ["Haider Al-Jaber", "Ali Al-Jaber", "Hassan Al-Jaber", "Hassan Wife"],
-    // GRUPO Z
+    
+    "ANTONIOOVIEDO": ["Antonio Oviedo"],
+    "SRAOVIEDO": ["Sra. Oviedo"],
+    
+    "ALFONSODELGADILLO": ["Alfonso Delgadillo"],
+    "KRITZIADELGADILLO": ["Kritzia Delgadillo"],
+    
+    "YOLANDADERIQUER": ["Yolanda Deriquer"],
+    "EMILIANODERIQUER": ["Emiliano Deriquer", "Emiliano + 1"],
+    
+    "LETICIAGONGORA": ["Leticia Gongora"],
+    "MAXVARGAS": ["Max Vargas", "Max +1"],
+    
+    "ALVINGOMEZ": ["Alvin Gomez"],
+    "ITZELCALLEROS": ["Itzel Calleros"],
+    
+    "HAIDERALJABER": ["Haider Al-Jaber"],
+    "ALIALJABER": ["Ali Al-Jaber"],
+    "HASSANALJABER": ["Hassan Al-Jaber", "Hassan Wife"],
+    
     "NICKOLASFERNANDEZ": ["Nickolas Fernandez"],
-    // GRUPO AA
-    "MAURICIOORTIZ": ["Mauricio Ortiz", "Shai Ortiz"],
-    // GRUPO BB
+    
+    "MAURICIOORTIZ": ["Mauricio Ortiz"],
+    "SHAIORTIZ": ["Shai Ortiz"],
+    
     "KEVINGOMEZ": ["Kevin Gomez", "Kevin Gomez +1"],
-    // GRUPO CC
-    "ARMANIPRIETO": ["Armani Prieto", "Paulina Ramirez"],
-    // GRUPO DD
+    
+    "ARMANIPRIETO": ["Armani Prieto"],
+    "PAULINARAMIREZ": ["Paulina Ramirez"],
+    
     "ARAMOTANEZ": ["Aram Otanez"],
-    // GRUPO FF
+    
     "GUILLERMOCABALLERO": ["Guillermo Caballero", "Guillermo Caballero +1"],
-    // GRUPO GG
+    
     "CARLOSDURAN": ["Carlos Duran", "Carlos Duran Wife"],
-    // GRUPO II
-    "JESSERAMIREZ": ["Jesse Ramirez", "Dakota Robertson"],
-    // GRUPO JJ
+    
+    "JESSERAMIREZ": ["Jesse Ramirez"],
+    "DAKOTAROBERTSON": ["Dakota Robertson"],
+    
     "EDERCONTRERAS": ["Eder Contreras", "Eder +1"],
-    // GRUPO LL
+    
     "OZIELGONZALEZ": ["Oziel Gonzalez"],
-    // GRUPO MM
-    "KEVINACKERMAN": ["Kevin Ackerman", "Viviana Ackerman"],
-    // GRUPO NN
+    
+    "KEVINACKERMAN": ["Kevin Ackerman"],
+    "VIVIANAACKERMAN": ["Viviana Ackerman"],
+    
     "IVANMARMEL": ["Ivan Marmel", "Ivan + 1"],
-    // GRUPO PP
+    
     "PATRICIOYRIZAR": ["Patricio Yrizar"],
-    // GRUPO QQ
+    
     "ANDREAGARCIA": ["Andrea Garcia"],
-    // GRUPO RR
+    
     "GUILLERMOCARRILLO": ["Guillermo Carrillo", "Guillermo Carrillo +1"],
-    // GRUPO SS
-    "TIFFANYVERDUZCO": ["Tiffany Verduzco", "Omar Camacho Perez"],
-    // GRUPO TT
+    
+    "TIFFANYVERDUZCO": ["Tiffany Verduzco"],
+    "OMARCAMACHOPEREZ": ["Omar Camacho Perez"],
+    
     "GASTONBUSTAMANTE": ["Gaston Bustamante", "Gaston Bustamante +1"],
-    // GRUPO UU
+    
     "ESTEBANMELENDEZ": ["Esteban Melendez"],
-    // GRUPO VV
-    "ANTHONYTHUESON": ["Anthony Thueson", "Andrea Thueson"],
-    // GRUPO YY
+    
+    "ANTHONYTHUESON": ["Anthony Thueson"],
+    "ANDREATHUESON": ["Andrea Thueson"],
+    
     "JUANPABLOBUSTAMANTE": ["Juan Pablo Bustamante"],
-    // GRUPO ZZ
+    
     "PAULOKRASOVSKY": ["Paulo Krasovsky"],
-    // GRUPO AAA
+    
     "BENJAMINAGUILAR": ["Benjamin Aguilar", "Benjamin + 1"],
-    // GRUPO BBB
+    
     "MARTINTULA": ["Martin Tula", "Martin + 1"],
-    // GRUPO CCC
+    
     "HECTORZAMORA": ["Hector Zamora", "Hector +1"],
-    // GRUPO DDD
+    
     "RODRIGOGIRALDEZ": ["Rodrigo Giraldez", "Rodrigo Wife"],
 
+    // ==========================================
     // INVITADOS ALEXIA (Novia)
-    // GRUPO A
-    "ALEXIAROCHA": ["Alexia Rocha", "Maria Dominga Limón", "Lauro Rocha", "Mauricio Rocha"],
-    // GRUPO B
-    "PATRICIOROCHA": ["Patricio Rocha", "Isabel Mascareño", "Lauro Patricio Rocha", "Isabella Rocha"],
-    // GRUPO C
-    "CRISTELROCHA": ["Cristel Rocha", "Hernán Castaneda", "Emma Victoria Castaneda"],
-    // GRUPO D - CORREGIDO CON ACEVES
-    "JESUSLIMONACEVES": ["Jesús Limón Aceves", "Griselda Torres", "Kenny Limón Torres", "Kevin Limón Torres", "Maria Fernanda Limón"],
-    // GRUPO E
-    "ALANRODRIGUEZ": ["Alan Rodriguez", "Krisbel Limón"],
-    // GRUPO F
-    "SENORRUBENLIMON": ["Señor Ruben Limón", "Carlota Amalia", "Ruben Limón", "Jeovany Limón", "Marcela Farfan"],
-    // GRUPO G
-    "JESUSELENALIMON": ["Jesus Elena Limón", "Ciro Mejia", "Ádaleni Mejia", "Rey Mejia", "Mariana Casian"],
-    // GRUPO H
-    "ALEJANDRINOLIMON": ["Alejandrino Limón", "Arcelia Limón"],
-    // GRUPO I
-    "CINDYLIMON": ["Cindy Limón", "Rodólfo Ramirez"],
-    // GRUPO J
-    "LISETTELIMONDEROBLES": ["Lisette Limón de Robles", "Gustavo Robles"],
-    // GRUPO K - SE QUEDA COMO JESUS LIMON ORIGINAL
-    "JESUSLIMON": ["Jesús Limón", "Adriana Gastelum Limón"],
-    // GRUPO L
-    "LUZMARIANIEBLA": ["Luz Maria Niebla", "Dr. Ruben Camacho"],
-    // GRUPO M
-    "LOURDESMENDEZ": ["Lourdes Méndez", "Fela Osuna"],
-    // GRUPO N
-    "LOLISLIMON": ["Lolis Limón", "Lilibel Gil", "Eduardo Guarello", "Orbelin Gil", "Erika Gil", "Irám Gil", "Ilse Yessenia Gil"],
-    // GRUPO O
-    "RAULVILLARREAL": ["Raul Villarreal", "Estefanía Villarreal", "Diego Villarreal", "Octavio Villarreal", "Mariana Villarreal", "Oscar Villarreal", "Ricardo Villarreal"],
-    // GRUPO P
-    "AMAIRANILIMON": ["Amairani Limón", "Jaime Limón"],
-    // GRUPO Q
-    "LAMBERTOLIMON": ["Lamberto Limón", "Mirna Limón", "Clarissa Limón", "Emmanuel Perez"],
-    // GRUPO R
-    "NEREYDALIMON": ["Nereyda Limón", "Señor Arturo Bobadilla", "Vanessa Bobadilla", "Arturo Bobadilla Limón"],
-    // GRUPO S
-    "CECIGONZALEZ": ["Ceci Gonzalez", "Daniel Gonzalez"],
-    // GRUPO T
-    "LETICIAANGULO": ["Leticia Angulo", "Joel Angulo"],
-    // GRUPO U
-    "MARIELALIMON": ["Mariela Limón", "Miguel Hernandez", "Daniela Limón"],
-    // GRUPO V
-    "MARIBELMEDINA": ["Maribel Medina", "Enrique Gastelum"],
-    // GRUPO W
-    "FAUSTINOGAXIOLA": ["Faustino Gaxiola", "Irma Gaxiola"],
-    // GRUPO X
-    "FRANCISELENES": ["Francis Elenes", "Jaime Leyva"],
-    // GRUPO Y
+    // ==========================================
+    "ALEXIAROCHA": ["Alexia Rocha"],
+    "MARIADOMINGALIMON": ["Maria Dominga Limón"],
+    "LAUROROCHA": ["Lauro Rocha"],
+    "MAURICIOROCHA": ["Mauricio Rocha"],
+    
+    "PATRICIOROCHA": ["Patricio Rocha"],
+    "ISABELMASCARENO": ["Isabel Mascareño"],
+    "LAUROPATRICIOROCHA": ["Lauro Patricio Rocha"],
+    "ISABELLAROCHA": ["Isabella Rocha"],
+    
+    "CRISTELROCHA": ["Cristel Rocha"],
+    "HERNANCASTANEDA": ["Hernán Castaneda"],
+    "EMMAVICTORIACASTANEDA": ["Emma Victoria Castaneda"],
+    
+    "JESUSLIMONACEVES": ["Jesús Limón Aceves"],
+    "GRISELDATORRES": ["Griselda Torres"],
+    "KENNYLIMONTORRES": ["Kenny Limón Torres"],
+    "KEVINLIMONTORRES": ["Kevin Limón Torres"],
+    "MARIAFERNANDALIMON": ["Maria Fernanda Limón"],
+    
+    "ALANRODRIGUEZ": ["Alan Rodriguez"],
+    "KRISBELLIMON": ["Krisbel Limón"],
+    
+    "SENORRUBENLIMON": ["Señor Ruben Limón"],
+    "CARLOTAAMALIA": ["Carlota Amalia"],
+    "RUBENLIMON": ["Ruben Limón"],
+    "JEOVANYLIMON": ["Jeovany Limón"],
+    "MARCELAFARFAN": ["Marcela Farfan"],
+    
+    "JESUSELENALIMON": ["Jesus Elena Limón"],
+    "CIROMEJIA": ["Ciro Mejia"],
+    "ADALENIMEJIA": ["Ádaleni Mejia"],
+    "REYMEJIA": ["Rey Mejia"],
+    "MARIANACASIAN": ["Mariana Casian"],
+    
+    "ALEJANDRINOLIMON": ["Alejandrino Limón"],
+    "ARCELIALIMON": ["Arcelia Limón"],
+    
+    "CINDYLIMON": ["Cindy Limón"],
+    "RODOLFORAMIREZ": ["Rodólfo Ramirez"],
+    
+    "LISETTELIMONDEROBLES": ["Lisette Limón de Robles"],
+    "GUSTAVOROBLES": ["Gustavo Robles"],
+    
+    "JESUSLIMON": ["Jesús Limón"],
+    "ADRIANAGASTELUMLIMON": ["Adriana Gastelum Limón"],
+    
+    "LUZMARIANIEBLA": ["Luz Maria Niebla"],
+    "DRRUBENCAMACHO": ["Dr. Ruben Camacho"],
+    
+    "LOURDESMENDEZ": ["Lourdes Méndez"],
+    "FELAOSUNA": ["Fela Osuna"],
+    
+    "LOLISLIMON": ["Lolis Limón"],
+    "LILIBELGIL": ["Lilibel Gil"],
+    "EDUARDOGUARELLO": ["Eduardo Guarello"],
+    "ORBELINGIL": ["Orbelin Gil"],
+    "ERIKAGIL": ["Erika Gil"],
+    "IRAMGIL": ["Irám Gil"],
+    "ILSEYESSENIAGIL": ["Ilse Yessenia Gil"],
+    
+    "RAULVILLARREAL": ["Raul Villarreal"],
+    "ESTEFANIAVILLARREAL": ["Estefanía Villarreal"],
+    "DIEGOVILLARREAL": ["Diego Villarreal"],
+    "OCTAVIOVILLARREAL": ["Octavio Villarreal"],
+    "MARIANAVILLARREAL": ["Mariana Villarreal"],
+    "OSCARVILLARREAL": ["Oscar Villarreal"],
+    "RICARDOVILLARREAL": ["Ricardo Villarreal"],
+    
+    "AMAIRANILIMON": ["Amairani Limón"],
+    "JAIMELIMON": ["Jaime Limón"],
+    
+    "LAMBERTOLIMON": ["Lamberto Limón"],
+    "MIRNALIMON": ["Mirna Limón"],
+    "CLARISSALIMON": ["Clarissa Limón"],
+    "EMMANUELPEREZ": ["Emmanuel Perez"],
+    
+    "NEREYDALIMON": ["Nereyda Limón"],
+    "SENORARTUROBOBADILLA": ["Señor Arturo Bobadilla"],
+    "VANESSABOBADILLA": ["Vanessa Bobadilla"],
+    "ARTUROBOBADILLALIMON": ["Arturo Bobadilla Limón"],
+    
+    "CECIGONZALEZ": ["Ceci Gonzalez"],
+    "DANIELGONZALEZ": ["Daniel Gonzalez"],
+    
+    "LETICIAANGULO": ["Leticia Angulo"],
+    "JOELANGULO": ["Joel Angulo"],
+    
+    "MARIELALIMON": ["Mariela Limón"],
+    "MIGUELHERNANDEZ": ["Miguel Hernandez"],
+    "DANIELALIMON": ["Daniela Limón"],
+    
+    "MARIBELMEDINA": ["Maribel Medina"],
+    "ENRIQUEGASTELUM": ["Enrique Gastelum"],
+    
+    "FAUSTINOGAXIOLA": ["Faustino Gaxiola"],
+    "IRMAGAXIOLA": ["Irma Gaxiola"],
+    
+    "FRANCISELENES": ["Francis Elenes"],
+    "JAIMELEYVA": ["Jaime Leyva"],
+    
     "ENRIQUEROCHA": ["Enrique Rocha"],
-    // GRUPO Z
-    "ERIKAROCHA": ["Erika Rocha", "Erika Elenes"],
-    // GRUPO AA
-    "SOFIAROCHA": ["Sofia Rocha", "Rogelio Ramirez", "Hicel Ramirez Rocha", "Husberto Reveles"],
-    // GRUPO BB
+    
+    "ERIKAROCHA": ["Erika Rocha"],
+    "ERIKAELENES": ["Erika Elenes"],
+    
+    "SOFIAROCHA": ["Sofia Rocha"],
+    "ROGELIORAMIREZ": ["Rogelio Ramirez"],
+    "HICELRAMIREZROCHA": ["Hicel Ramirez Rocha"],
+    "HUSBERTOREVELES": ["Husberto Reveles"],
+    
     "LESLIECHANTELRAMIREZ": ["Leslie Chantel Ramirez"],
-    // GRUPO CC
-    "SENORATAIDEROCHA": ["Señora Taide Rocha", "Ernesto Sillas", "Lyz Gastelum", "Mauricio Sillas", "Jorge Sillas", "Valeria Sillas", "Areli Melendrez", "Taide Sillas", "Ulises Arce"],
-    // GRUPO DD
-    "SILVIAROCHA": ["Silvia Rocha", "Verónica Torres", "Silvia Torres", "Thomas", "Emmanuel Torres", "Britney Hurtado", "Mauricio Torres", "Daritza Torres", "Curtis"],
-    // GRUPO EE
-    "ASHLEYROBLES": ["Ashley Robles", "Liskelsey Robles"],
-    // GRUPO FF
-    "CAROLINAOVIEDOLASHGARI": ["Carolina Oviedo Lashgari", "Nico Lashgari"],
-    // GRUPO GG
-    "COVADONGAESCALANTE": ["Covadonga Escalante", "Emilio Romo"],
-    // GRUPO HH
+    
+    "SENORATAIDEROCHA": ["Señora Taide Rocha"],
+    "ERNESTOSILLAS": ["Ernesto Sillas"],
+    "LYZGASTELUM": ["Lyz Gastelum"],
+    "MAURICIOSILLAS": ["Mauricio Sillas"],
+    "JORGESILLAS": ["Jorge Sillas"],
+    "VALERIASILLAS": ["Valeria Sillas"],
+    "ARELIMELENDREZ": ["Areli Melendrez"],
+    "TAIDESILLAS": ["Taide Sillas"],
+    "ULISESARCE": ["Ulises Arce"],
+    
+    "SILVIAROCHA": ["Silvia Rocha"],
+    "VERONICATORRES": ["Verónica Torres"],
+    "SILVIATORRES": ["Silvia Torres"],
+    "THOMAS": ["Thomas"],
+    "EMMANUELTORRES": ["Emmanuel Torres"],
+    "BRITNEYHURTADO": ["Britney Hurtado"],
+    "MAURICIOTORRES": ["Mauricio Torres"],
+    "DARITZATORRES": ["Daritza Torres"],
+    "CURTIS": ["Curtis"],
+    
+    "ASHLEYROBLES": ["Ashley Robles"],
+    "LISKELSEYROBLES": ["Liskelsey Robles"],
+    
+    "CAROLINAOVIEDOLASHGARI": ["Carolina Oviedo Lashgari"],
+    "NICOLASHGARI": ["Nico Lashgari"],
+    
+    "COVADONGAESCALANTE": ["Covadonga Escalante"],
+    "EMILIOROMO": ["Emilio Romo"],
+    
     "SARAHSANCHEZ": ["Sarah Sanchez", "Sarah Sanchez plus one"],
-    // GRUPO II
-    "REBECCASIFUENTES": ["Rebecca Sifuentes", "Elizabeth Sifuentes"],
-    // GRUPO JJ
+    
+    "REBECCASIFUENTES": ["Rebecca Sifuentes"],
+    "ELIZABETHSIFUENTES": ["Elizabeth Sifuentes"],
+    
     "BRIANNAHERRERA": ["Brianna Herrera"],
-    // GRUPO KK
+    
     "LANDONGRANILLO": ["Landon Granillo", "Landon plus one"],
-    // GRUPO LL
-    "KAILEYWOLF": ["Kailey Wolf", "Henry Wolf"],
-    // GRUPO MM
-    "ALEXISANDERSON": ["Alexis Anderson", "Rebecca Muench"],
-    // GRUPO NN
-    "SOFIAMAYER": ["Sofía Mayer", "Andrés Domínguez"],
-    // GRUPO OO
-    "MICHELLESMITH": ["Michelle Smith", "Jenna Contreras"],
-    // GRUPO PP
-    "MARIOOCHOA": ["Mario Ochoa", "Letizia Riedel", "Señor Mario Ochoa", "Paloma Alonso"],
-    // GRUPO QQ
-    "VIANNYVALENZUELA": ["Vianny Valenzuela", "Jessica Valenzuela"],
-    // GRUPO RR
-    "CRISTINAMACIAS": ["Cristina Macías", "Daniella Ramirez"],
-    // GRUPO SS
-    "QUIQUEFLORES": ["Quique Flores", "Alejandra Dávila"],
-    // GRUPO TT
+    
+    "KAILEYWOLF": ["Kailey Wolf"],
+    "HENRYWOLF": ["Henry Wolf"],
+    
+    "ALEXISANDERSON": ["Alexis Anderson"],
+    "REBECCAMUENCH": ["Rebecca Muench"],
+    
+    "SOFIAMAYER": ["Sofía Mayer"],
+    "ANDRESDOMINGUEZ": ["Andrés Domínguez"],
+    
+    "MICHELLESMITH": ["Michelle Smith"],
+    "JENNACONTRERAS": ["Jenna Contreras"],
+    
+    "MARIOOCHOA": ["Mario Ochoa"],
+    "LETIZIARIEDEL": ["Letizia Riedel"],
+    "SENORMARIOOCHOA": ["Señor Mario Ochoa"],
+    "PALOMAALONSO": ["Paloma Alonso"],
+    
+    "VIANNYVALENZUELA": ["Vianny Valenzuela"],
+    "JESSICAVALENZUELA": ["Jessica Valenzuela"],
+    
+    "CRISTINAMACIAS": ["Cristina Macías"],
+    "DANIELLARAMIREZ": ["Daniella Ramirez"],
+    
+    "QUIQUEFLORES": ["Quique Flores"],
+    "ALEJANDRADAVILA": ["Alejandra Dávila"],
+    
     "MARIACARDENAS": ["Maria Cardenas"],
-    // GRUPO UU
-    "LUPITALIMON": ["Lupita Limón", "Alfonso Limón"],
-    // GRUPO VV
-    "LICHINOJOSA": ["Lic Hinojosa", "Paloma Hinojosa"],
-    // GRUPO WW
-    "GUADALUPEBARRAGAN": ["Guadalupe Barragán", "Pompeyo Barragán"],
-    // GRUPO XX
+    
+    "LUPITALIMON": ["Lupita Limón"],
+    "ALFONSOLIMON": ["Alfonso Limón"],
+    
+    "LICHINOJOSA": ["Lic Hinojosa"],
+    "PALOMAHINOJOSA": ["Paloma Hinojosa"],
+    
+    "GUADALUPEBARRAGAN": ["Guadalupe Barragán"],
+    "POMPEYOBARRAGAN": ["Pompeyo Barragán"],
+    
     "VERONICAJOHNSON": ["Verónica Johnson", "Verónica Johnson plus one"],
-    // GRUPO YY
-    "SANDRATORRES": ["Sandra Torres", "Miguel Rivas"],
-    // GRUPO ZZ
-    "JUANBERNAL": ["Juan Bernal", "Natalia Smith"],
-    // GRUPO AAA
+    
+    "SANDRATORRES": ["Sandra Torres"],
+    "MIGUELRIVAS": ["Miguel Rivas"],
+    
+    "JUANBERNAL": ["Juan Bernal"],
+    "NATALIASMITH": ["Natalia Smith"],
+    
     "DRAMICHELMARTINEZFRANCO": ["Dra. Michel Martínez Franco", "Dra. Michelle plus one"],
-    // GRUPO BBB
+    
     "SYDNEYRIBOT": ["Sydney Ribot", "Sydney Ribot plus one"],
-    // GRUPO CCC
-    "ALONDRALIMON": ["Alondra Limón", "Moe Othman"],
-    // GRUPO DDD
-    "ANGELURETA": ["Ángel Ureta", "Juan Alberto Ureta"],
-    // GRUPO EEE
-    "SAMMIERYAN": ["Sammie Ryan", "Carmine Ryan"],
-    // GRUPO FFF
-    "RAMIROGAXIOLA": ["Ramiro Gaxiola", "Fidelia Gaxiola"],
-    // GRUPO GGG
+    
+    "ALONDRALIMON": ["Alondra Limón"],
+    "MOEOTHMAN": ["Moe Othman"],
+    
+    "ANGELURETA": ["Ángel Ureta"],
+    "JUANALBERTOURETA": ["Juan Alberto Ureta"],
+    
+    "SAMMIERYAN": ["Sammie Ryan"],
+    "CARMINERYAN": ["Carmine Ryan"],
+    
+    "RAMIROGAXIOLA": ["Ramiro Gaxiola"],
+    "FIDELIAGAXIOLA": ["Fidelia Gaxiola"],
+    
     "ALEJANDRAROCHA": ["Alejandra Rocha"],
-    // GRUPO HHH
-    "MICHAELLEAL": ["Michael Leal", "Marlene Ortiz"],
-
-    //Wedding Planner
+    
+    "MICHAELLEAL": ["Michael Leal"],
+    "MARLENEORTIZ": ["Marlene Ortiz"],
+    
     "MAURICIOKIRSCHNER": ["Mauricio Kirschner"],
-
-    // Extra
     "RENATANAVARRO": ["Renata Navarro"]
 };
 
 // ==========================================
 // LISTA VIP ROMPEHIELO
-// Invitados de la imagen con número en la columna "Domecq"
 // ==========================================
 const rompehieloVIPs = [
     // Grupo Javan
@@ -533,8 +659,9 @@ const rompehieloVIPs = [
     "CARMINE RYAN",
     "ALEJANDRA ROCHA",
     "MICHAEL LEAL",
-    "MARLENE ORTIZ"
-
+    "MARLENE ORTIZ",
+    "MAURICIO KIRSCHNER",
+    "RENATA NAVARRO"
 ];
 
 // DATOS DE SECCIONES
