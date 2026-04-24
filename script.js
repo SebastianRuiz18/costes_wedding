@@ -50,7 +50,7 @@ const translations = {
         details: "DETALLES",
         close: "CERRAR",
         nextSection: "SIGUIENTE SECCION",
-        codePrompt: "Por favor ingresa tu nombre (como viene en la invitación) para buscar tus lugares.",
+        codePrompt: "Por favor ingresa tu nombre para buscar tus lugares.",
         codeLabel: "CÓDIGO (TU NOMBRE)",
         codeError: "Invitación no encontrada. Intenta de nuevo o contacta a la pareja.",
         enterBtn: "BUSCAR INVITACIÓN",
@@ -84,192 +84,128 @@ const translations = {
 // BASE DE DATOS DE INVITADOS (INDIVIDUALES Y +1)
 // ==========================================
 const guestsDB = {
-    // ==========================================
     // INVITADOS JAVAN (Novio)
-    // ==========================================
     "CLAUDIAJIMENEZ": ["Claudia Jimenez", "Mom +1"],
-    
     "SILVIAARANGURE": ["Silvia Arangure"],
     "SARAARANGURE": ["Sara Arangure"],
     "ABUEALBAARANGURE": ["Abue Alba Arangure"],
-    
     "PRIZILACARBONERODEROJAS": ["Prizila Carbonero de Rojas"],
     "OMARROJAS": ["Omar Rojas"],
-    
     "MAYACARBONERO": ["Maya Carbonero"],
     "STEVIEORTEGA": ["Stevie Ortega"],
-    
     "VALENTEVILLASENOR": ["Valente Villaseñor"],
     "JOSEVILLASENOR": ["Jose Villaseñor"],
-    
     "RICARDOGIL": ["Ricardo Gil"],
-    
     "CONNERBROWN": ["Conner Brown"],
     "HAILEYBROWN": ["Hailey Brown"],
-    
     "JORGEJIMENEZ": ["Jorge Jimenez"],
-    
     "OMARVEYTIA": ["Omar Veytia"],
     "BRIANNAVEYTIA": ["Brianna Veytia"],
-    
     "MADYJIMENEZ": ["Mady Jimenez"],
     "CHRISTIAN": ["Christian"],
-    
     "FRANKBUSTOS": ["Frank Bustos"],
-    
     "ROBERTOJACOTT": ["Roberto Jacott"],
     "LUZMARIELJACOTT": ["Luz Mariel Jacott", "Luz Jacott +1"],
-    
     "MARIOROJAS": ["Mario Rojas"],
     "CLAUDIAROJAS": ["Claudia Rojas"],
-    
     "ABUELITAELIZABETH": ["Abuelita Elizabeth"],
     "CHRISTIANCARBONERO": ["Christian Carbonero"],
     "TASHACARBONERO": ["Tasha Carbonero"],
     "FRANKYCARBONERO": ["Franky Carbonero"],
     "AUDRINACARBONERO": ["Audrina Carbonero"],
-    
     "ALEJANDROCARBONERO": ["Alejandro Carbonero"],
     "CRISTINACARBONERO": ["Cristina Carbonero"],
     "SEBASTIANCARBONERO": ["Sebastian Carbonero"],
     "GABYCARBONERO": ["Gaby Carbonero"],
-    
     "DAD": ["Dad"],
     "ARLENECARBONERO": ["Arlene Carbonero"],
-    
     "ANGELICACUEVAS": ["Angelica Cuevas", "Angelica +1"],
-    
     "ANTONIOOVIEDO": ["Antonio Oviedo"],
     "SRAOVIEDO": ["Sra. Oviedo"],
-    
     "ALFONSODELGADILLO": ["Alfonso Delgadillo"],
     "KRITZIADELGADILLO": ["Kritzia Delgadillo"],
-    
     "YOLANDADERIQUER": ["Yolanda Deriquer"],
     "EMILIANODERIQUER": ["Emiliano Deriquer", "Emiliano + 1"],
-    
     "LETICIAGONGORA": ["Leticia Gongora"],
     "MAXVARGAS": ["Max Vargas", "Max +1"],
-    
     "ALVINGOMEZ": ["Alvin Gomez"],
     "ITZELCALLEROS": ["Itzel Calleros"],
-    
     "HAIDERALJABER": ["Haider Al-Jaber"],
     "ALIALJABER": ["Ali Al-Jaber"],
     "HASSANALJABER": ["Hassan Al-Jaber", "Hassan Wife"],
-    
     "NICKOLASFERNANDEZ": ["Nickolas Fernandez"],
-    
     "MAURICIOORTIZ": ["Mauricio Ortiz"],
     "SHAIORTIZ": ["Shai Ortiz"],
-    
     "KEVINGOMEZ": ["Kevin Gomez", "Kevin Gomez +1"],
-    
     "ARMANIPRIETO": ["Armani Prieto"],
     "PAULINARAMIREZ": ["Paulina Ramirez"],
-    
     "ARAMOTANEZ": ["Aram Otanez"],
-    
     "GUILLERMOCABALLERO": ["Guillermo Caballero", "Guillermo Caballero +1"],
-    
     "CARLOSDURAN": ["Carlos Duran", "Carlos Duran Wife"],
-    
     "JESSERAMIREZ": ["Jesse Ramirez"],
     "DAKOTAROBERTSON": ["Dakota Robertson"],
-    
     "EDERCONTRERAS": ["Eder Contreras", "Eder +1"],
-    
     "OZIELGONZALEZ": ["Oziel Gonzalez"],
-    
     "KEVINACKERMAN": ["Kevin Ackerman"],
     "VIVIANAACKERMAN": ["Viviana Ackerman"],
-    
     "IVANMARMEL": ["Ivan Marmel", "Ivan + 1"],
-    
     "PATRICIOYRIZAR": ["Patricio Yrizar"],
-    
     "ANDREAGARCIA": ["Andrea Garcia"],
-    
     "GUILLERMOCARRILLO": ["Guillermo Carrillo", "Guillermo Carrillo +1"],
-    
     "TIFFANYVERDUZCO": ["Tiffany Verduzco"],
     "OMARCAMACHOPEREZ": ["Omar Camacho Perez"],
-    
     "GASTONBUSTAMANTE": ["Gaston Bustamante", "Gaston Bustamante +1"],
-    
     "ESTEBANMELENDEZ": ["Esteban Melendez"],
-    
     "ANTHONYTHUESON": ["Anthony Thueson"],
     "ANDREATHUESON": ["Andrea Thueson"],
-    
     "JUANPABLOBUSTAMANTE": ["Juan Pablo Bustamante"],
-    
     "PAULOKRASOVSKY": ["Paulo Krasovsky"],
-    
     "BENJAMINAGUILAR": ["Benjamin Aguilar", "Benjamin + 1"],
-    
     "MARTINTULA": ["Martin Tula", "Martin + 1"],
-    
     "HECTORZAMORA": ["Hector Zamora", "Hector +1"],
-    
     "RODRIGOGIRALDEZ": ["Rodrigo Giraldez", "Rodrigo Wife"],
 
-    // ==========================================
     // INVITADOS ALEXIA (Novia)
-    // ==========================================
     "ALEXIAROCHA": ["Alexia Rocha"],
     "MARIADOMINGALIMON": ["Maria Dominga Limón"],
     "LAUROROCHA": ["Lauro Rocha"],
     "MAURICIOROCHA": ["Mauricio Rocha"],
-    
     "PATRICIOROCHA": ["Patricio Rocha"],
     "ISABELMASCARENO": ["Isabel Mascareño"],
     "LAUROPATRICIOROCHA": ["Lauro Patricio Rocha"],
     "ISABELLAROCHA": ["Isabella Rocha"],
-    
     "CRISTELROCHA": ["Cristel Rocha"],
     "HERNANCASTANEDA": ["Hernán Castaneda"],
     "EMMAVICTORIACASTANEDA": ["Emma Victoria Castaneda"],
-    
     "JESUSLIMONACEVES": ["Jesús Limón Aceves"],
     "GRISELDATORRES": ["Griselda Torres"],
     "KENNYLIMONTORRES": ["Kenny Limón Torres"],
     "KEVINLIMONTORRES": ["Kevin Limón Torres"],
     "MARIAFERNANDALIMON": ["Maria Fernanda Limón"],
-    
     "ALANRODRIGUEZ": ["Alan Rodriguez"],
     "KRISBELLIMON": ["Krisbel Limón"],
-    
     "SENORRUBENLIMON": ["Señor Ruben Limón"],
     "CARLOTAAMALIA": ["Carlota Amalia"],
     "RUBENLIMON": ["Ruben Limón"],
     "JEOVANYLIMON": ["Jeovany Limón"],
     "MARCELAFARFAN": ["Marcela Farfan"],
-    
     "JESUSELENALIMON": ["Jesus Elena Limón"],
     "CIROMEJIA": ["Ciro Mejia"],
     "ADALENIMEJIA": ["Ádaleni Mejia"],
     "REYMEJIA": ["Rey Mejia"],
     "MARIANACASIAN": ["Mariana Casian"],
-    
     "ALEJANDRINOLIMON": ["Alejandrino Limón"],
     "ARCELIALIMON": ["Arcelia Limón"],
-    
     "CINDYLIMON": ["Cindy Limón"],
     "RODOLFORAMIREZ": ["Rodólfo Ramirez"],
-    
     "LISETTELIMONDEROBLES": ["Lisette Limón de Robles"],
     "GUSTAVOROBLES": ["Gustavo Robles"],
-    
     "JESUSLIMON": ["Jesús Limón"],
     "ADRIANAGASTELUMLIMON": ["Adriana Gastelum Limón"],
-    
     "LUZMARIANIEBLA": ["Luz Maria Niebla"],
     "DRRUBENCAMACHO": ["Dr. Ruben Camacho"],
-    
     "LOURDESMENDEZ": ["Lourdes Méndez"],
     "FELAOSUNA": ["Fela Osuna"],
-    
     "LOLISLIMON": ["Lolis Limón"],
     "LILIBELGIL": ["Lilibel Gil"],
     "EDUARDOGUARELLO": ["Eduardo Guarello"],
@@ -277,7 +213,6 @@ const guestsDB = {
     "ERIKAGIL": ["Erika Gil"],
     "IRAMGIL": ["Irám Gil"],
     "ILSEYESSENIAGIL": ["Ilse Yessenia Gil"],
-    
     "RAULVILLARREAL": ["Raul Villarreal"],
     "ESTEFANIAVILLARREAL": ["Estefanía Villarreal"],
     "DIEGOVILLARREAL": ["Diego Villarreal"],
@@ -285,51 +220,37 @@ const guestsDB = {
     "MARIANAVILLARREAL": ["Mariana Villarreal"],
     "OSCARVILLARREAL": ["Oscar Villarreal"],
     "RICARDOVILLARREAL": ["Ricardo Villarreal"],
-    
     "AMAIRANILIMON": ["Amairani Limón"],
     "JAIMELIMON": ["Jaime Limón"],
-    
     "LAMBERTOLIMON": ["Lamberto Limón"],
     "MIRNALIMON": ["Mirna Limón"],
     "CLARISSALIMON": ["Clarissa Limón"],
     "EMMANUELPEREZ": ["Emmanuel Perez"],
-    
     "NEREYDALIMON": ["Nereyda Limón"],
     "SENORARTUROBOBADILLA": ["Señor Arturo Bobadilla"],
     "VANESSABOBADILLA": ["Vanessa Bobadilla"],
     "ARTUROBOBADILLALIMON": ["Arturo Bobadilla Limón"],
-    
     "CECIGONZALEZ": ["Ceci Gonzalez"],
     "DANIELGONZALEZ": ["Daniel Gonzalez"],
-    
     "LETICIAANGULO": ["Leticia Angulo"],
     "JOELANGULO": ["Joel Angulo"],
-    
     "MARIELALIMON": ["Mariela Limón"],
     "MIGUELHERNANDEZ": ["Miguel Hernandez"],
     "DANIELALIMON": ["Daniela Limón"],
-    
     "MARIBELMEDINA": ["Maribel Medina"],
     "ENRIQUEGASTELUM": ["Enrique Gastelum"],
-    
     "FAUSTINOGAXIOLA": ["Faustino Gaxiola"],
     "IRMAGAXIOLA": ["Irma Gaxiola"],
-    
     "FRANCISELENES": ["Francis Elenes"],
     "JAIMELEYVA": ["Jaime Leyva"],
-    
     "ENRIQUEROCHA": ["Enrique Rocha"],
-    
     "ERIKAROCHA": ["Erika Rocha"],
     "ERIKAELENES": ["Erika Elenes"],
-    
     "SOFIAROCHA": ["Sofia Rocha"],
     "ROGELIORAMIREZ": ["Rogelio Ramirez"],
     "HICELRAMIREZROCHA": ["Hicel Ramirez Rocha"],
     "HUSBERTOREVELES": ["Husberto Reveles"],
-    
     "LESLIECHANTELRAMIREZ": ["Leslie Chantel Ramirez"],
-    
     "SENORATAIDEROCHA": ["Señora Taide Rocha"],
     "ERNESTOSILLAS": ["Ernesto Sillas"],
     "LYZGASTELUM": ["Lyz Gastelum"],
@@ -339,7 +260,6 @@ const guestsDB = {
     "ARELIMELENDREZ": ["Areli Melendrez"],
     "TAIDESILLAS": ["Taide Sillas"],
     "ULISESARCE": ["Ulises Arce"],
-    
     "SILVIAROCHA": ["Silvia Rocha"],
     "VERONICATORRES": ["Verónica Torres"],
     "SILVIATORRES": ["Silvia Torres"],
@@ -349,319 +269,123 @@ const guestsDB = {
     "MAURICIOTORRES": ["Mauricio Torres"],
     "DARITZATORRES": ["Daritza Torres"],
     "CURTIS": ["Curtis"],
-    
     "ASHLEYROBLES": ["Ashley Robles"],
     "LISKELSEYROBLES": ["Liskelsey Robles"],
-    
     "CAROLINAOVIEDOLASHGARI": ["Carolina Oviedo Lashgari"],
     "NICOLASHGARI": ["Nico Lashgari"],
-    
     "COVADONGAESCALANTE": ["Covadonga Escalante"],
     "EMILIOROMO": ["Emilio Romo"],
-    
     "SARAHSANCHEZ": ["Sarah Sanchez", "Sarah Sanchez plus one"],
-    
     "REBECCASIFUENTES": ["Rebecca Sifuentes"],
     "ELIZABETHSIFUENTES": ["Elizabeth Sifuentes"],
-    
     "BRIANNAHERRERA": ["Brianna Herrera"],
-    
     "LANDONGRANILLO": ["Landon Granillo", "Landon plus one"],
-    
     "KAILEYWOLF": ["Kailey Wolf"],
     "HENRYWOLF": ["Henry Wolf"],
-    
     "ALEXISANDERSON": ["Alexis Anderson"],
     "REBECCAMUENCH": ["Rebecca Muench"],
-    
     "SOFIAMAYER": ["Sofía Mayer"],
     "ANDRESDOMINGUEZ": ["Andrés Domínguez"],
-    
     "MICHELLESMITH": ["Michelle Smith"],
     "JENNACONTRERAS": ["Jenna Contreras"],
-    
     "MARIOOCHOA": ["Mario Ochoa"],
     "LETIZIARIEDEL": ["Letizia Riedel"],
     "SENORMARIOOCHOA": ["Señor Mario Ochoa"],
     "PALOMAALONSO": ["Paloma Alonso"],
-    
     "VIANNYVALENZUELA": ["Vianny Valenzuela"],
     "JESSICAVALENZUELA": ["Jessica Valenzuela"],
-    
     "CRISTINAMACIAS": ["Cristina Macías"],
     "DANIELLARAMIREZ": ["Daniella Ramirez"],
-    
     "QUIQUEFLORES": ["Quique Flores"],
     "ALEJANDRADAVILA": ["Alejandra Dávila"],
-    
     "MARIACARDENAS": ["Maria Cardenas"],
-    
     "LUPITALIMON": ["Lupita Limón"],
     "ALFONSOLIMON": ["Alfonso Limón"],
-    
     "LICHINOJOSA": ["Lic Hinojosa"],
     "PALOMAHINOJOSA": ["Paloma Hinojosa"],
-    
     "GUADALUPEBARRAGAN": ["Guadalupe Barragán"],
     "POMPEYOBARRAGAN": ["Pompeyo Barragán"],
-    
     "VERONICAJOHNSON": ["Verónica Johnson", "Verónica Johnson plus one"],
-    
     "SANDRATORRES": ["Sandra Torres"],
     "MIGUELRIVAS": ["Miguel Rivas"],
-    
     "JUANBERNAL": ["Juan Bernal"],
     "NATALIASMITH": ["Natalia Smith"],
-    
     "DRAMICHELMARTINEZFRANCO": ["Dra. Michel Martínez Franco", "Dra. Michelle plus one"],
-    
     "SYDNEYRIBOT": ["Sydney Ribot", "Sydney Ribot plus one"],
-    
     "ALONDRALIMON": ["Alondra Limón"],
     "MOEOTHMAN": ["Moe Othman"],
-    
     "ANGELURETA": ["Ángel Ureta"],
     "JUANALBERTOURETA": ["Juan Alberto Ureta"],
-    
     "SAMMIERYAN": ["Sammie Ryan"],
     "CARMINERYAN": ["Carmine Ryan"],
-    
     "RAMIROGAXIOLA": ["Ramiro Gaxiola"],
     "FIDELIAGAXIOLA": ["Fidelia Gaxiola"],
-    
     "ALEJANDRAROCHA": ["Alejandra Rocha"],
-    
     "MICHAELLEAL": ["Michael Leal"],
     "MARLENEORTIZ": ["Marlene Ortiz"],
-    
     "MAURICIOKIRSCHNER": ["Mauricio Kirschner"],
-    "RENATANAVARRO": ["Renata Navarro"]
+    "RENATANAVARRO": ["Renata Navarro"],
+    "JESSICABAUMGARTNER": ["Jessica Baumgartner"],
+    "AURORASALAZAR": ["Aurora Salazar"]
 };
+
+// ==========================================
+// PREPARAR LISTA PLANA PARA EL AUTOCOMPLETADO
+// Extraemos solo el PRIMER nombre de cada arreglo (el invitado principal)
+// ==========================================
+let allGuestNamesForSearch = [];
+for (const key in guestsDB) {
+    // Tomamos solo el índice 0 de cada grupo (el nombre principal, no el "+1")
+    allGuestNamesForSearch.push(guestsDB[key][0]); 
+}
 
 // ==========================================
 // LISTA VIP ROMPEHIELO
 // ==========================================
 const rompehieloVIPs = [
     // Grupo Javan
-    "CLAUDIA JIMENEZ",
-    "MOM +1",
-    "PRIZILA CARBONERO DE ROJAS",
-    "OMAR ROJAS",
-    "MAYA CARBONERO",
-    "STEVIE ORTEGA",
-    "VALENTE VILLASEÑOR",
-    "JOSE VILLASEÑOR",
-    "RICARDO GIL",
-    "CONNER BROWN",
-    "HAILEY BROWN",
-    "JORGE JIMENEZ",
-    "OMAR VEYTIA",
-    "BRIANNA VEYTIA",
-    "MADY JIMENEZ",
-    "CHRISTIAN",
-    "FRANK BUSTOS",
-    "ROBERTO JACOTT",
-    "FRANKY CARBONERO",
-    "AUDRINA CARBONERO",
-    "SEBASTIAN CARBONERO",
-    "GABY CARBONERO",
-    "DAD",
-    "ARLENE CARBONERO",
-    "ANGELICA CUEVAS",
-    "ANGELICA +1",
-    "ANTONIO OVIEDO",
-    "SRA. OVIEDO",
-    "EMILIANO DERIQUER",
-    "EMILIANO + 1",
-    "MAX VARGAS",
-    "MAX +1",
-    "ALVIN GOMEZ",
-    "ITZEL CALLEROS",
-    "HAIDER AL-JABER",
-    "ALI AL-JABER",
-    "HASSAN AL-JABER",
-    "HASSAN WIFE",
-    "NICKOLAS FERNANDEZ",
-    "MAURICIO ORTIZ",
-    "SHAI ORTIZ",
-    "KEVIN GOMEZ",
-    "KEVIN GOMEZ +1",
-    "ARMANI PRIETO",
-    "PAULINA RAMIREZ",
-    "ARAM OTANEZ",
-    "GUILLERMO CABALLERO",
-    "GUILLERMO CABALLERO +1",
-    "CARLOS DURAN",
-    "CARLOS DURAN WIFE",
-    "JESSE RAMIREZ",
-    "DAKOTA ROBERTSON",
-    "EDER CONTRERAS",
-    "EDER +1",
-    "OZIEL GONZALEZ",
-    "KEVIN ACKERMAN",
-    "VIVIANA ACKERMAN",
-    "IVAN MARMEL",
-    "IVAN + 1",
-    "PATRICIO YRIZAR",
-    "ANDREA GARCIA",
-    "GUILLERMO CARRILLO",
-    "GUILLERMO CARRILLO +1",
-    "TIFFANY VERDUZCO",
-    "OMAR CAMACHO PEREZ",
-    "GASTON BUSTAMANTE",
-    "GASTON BUSTAMANTE +1",
-    "ESTEBAN MELENDEZ",
-    "ANTHONY THUESON",
-    "ANDREA THUESON",
-    "JUAN PABLO BUSTAMANTE",
-    "PAULO KRASOVSKY",
-    "BENJAMIN AGUILAR",
-    "BENJAMIN + 1",
-    "MARTIN TULA",
-    "MARTIN + 1",
-    "HECTOR ZAMORA",
-    "HECTOR +1",
-    "RODRIGO GIRALDEZ",
-    "RODRIGO WIFE",
-
+    "CLAUDIA JIMENEZ", "MOM +1", "PRIZILA CARBONERO DE ROJAS", "OMAR ROJAS", "MAYA CARBONERO", "STEVIE ORTEGA",
+    "VALENTE VILLASEÑOR", "JOSE VILLASEÑOR", "RICARDO GIL", "CONNER BROWN", "HAILEY BROWN", "JORGE JIMENEZ",
+    "OMAR VEYTIA", "BRIANNA VEYTIA", "MADY JIMENEZ", "CHRISTIAN", "FRANK BUSTOS", "ROBERTO JACOTT",
+    "FRANKY CARBONERO", "AUDRINA CARBONERO", "SEBASTIAN CARBONERO", "GABY CARBONERO", "DAD", "ARLENE CARBONERO",
+    "ANGELICA CUEVAS", "ANGELICA +1", "ANTONIO OVIEDO", "SRA. OVIEDO", "EMILIANO DERIQUER", "EMILIANO + 1",
+    "MAX VARGAS", "MAX +1", "ALVIN GOMEZ", "ITZEL CALLEROS", "HAIDER AL-JABER", "ALI AL-JABER", "HASSAN AL-JABER",
+    "HASSAN WIFE", "NICKOLAS FERNANDEZ", "MAURICIO ORTIZ", "SHAI ORTIZ", "KEVIN GOMEZ", "KEVIN GOMEZ +1",
+    "ARMANI PRIETO", "PAULINA RAMIREZ", "ARAM OTANEZ", "GUILLERMO CABALLERO", "GUILLERMO CABALLERO +1",
+    "CARLOS DURAN", "CARLOS DURAN WIFE", "JESSE RAMIREZ", "DAKOTA ROBERTSON", "EDER CONTRERAS", "EDER +1",
+    "OZIEL GONZALEZ", "KEVIN ACKERMAN", "VIVIANA ACKERMAN", "IVAN MARMEL", "IVAN + 1", "PATRICIO YRIZAR",
+    "ANDREA GARCIA", "GUILLERMO CARRILLO", "GUILLERMO CARRILLO +1", "TIFFANY VERDUZCO", "OMAR CAMACHO PEREZ",
+    "GASTON BUSTAMANTE", "GASTON BUSTAMANTE +1", "ESTEBAN MELENDEZ", "ANTHONY THUESON", "ANDREA THUESON",
+    "JUAN PABLO BUSTAMANTE", "PAULO KRASOVSKY", "BENJAMIN AGUILAR", "BENJAMIN + 1", "MARTIN TULA", "MARTIN + 1",
+    "HECTOR ZAMORA", "HECTOR +1", "RODRIGO GIRALDEZ", "RODRIGO WIFE",
     //Grupo Alexia
-    "ALEXIA ROCHA",
-    "MARIA DOMINGA LIMÓN",
-    "LAURO ROCHA",
-    "MAURICIO ROCHA",
-    "PATRICIO ROCHA",
-    "ISABEL MASCAREÑO",
-    "LAURO PATRICIO ROCHA",
-    "ISABELLA ROCHA",
-    "CRISTEL ROCHA",
-    "HERNÁN CASTANEDA",
-    "EMMA VICTORIA CASTANEDA",
-    "KENNY LIMÓN TORRES",
-    "KEVIN LIMÓN TORRES",
-    "MARIA FERNANDA LIMÓN",
-    "ALAN RODRIGUEZ",
-    "KRISBEL LIMÓN",
-    "RUBEN LIMÓN",
-    "CIRO MEJIA",
-    "REY MEJIA",
-    "MARIANA CASIAN",
-    "CINDY LIMÓN",
-    "RODÓLFO RAMIREZ",
-    "LISETTE LIMÓN DE ROBLES",
-    "GUSTAVO ROBLES",
-    "JESÚS LIMÓN",
-    "ADRIANA GASTELUM LIMÓN",
-    "LOURDES MÉNDEZ",
-    "FELA OSUNA",
-    "LOLIS LIMÓN",
-    "LILIBEL GIL",
-    "EDUARDO GUARELLO",
-    "ORBELIN GIL",
-    "ERIKA GIL",
-    "IRÁM GIL",
-    "ILSE YESSENIA GIL",
-    "RAUL VILLARREAL",
-    "ESTEFANÍA VILLARREAL",
-    "DIEGO VILLARREAL",
-    "OCTAVIO VILLARREAL",
-    "MARIANA VILLARREAL",
-    "OSCAR VILLARREAL",
-    "RICARDO VILLARREAL",
-    "AMAIRANI LIMÓN",
-    "JAIME LIMÓN",
-    "LAMBERTO LIMÓN",
-    "MIRNA LIMÓN",
-    "CLARISSA LIMÓN",
-    "EMMANUEL PEREZ",
-    "NEREYDA LIMÓN",
-    "SEÑOR ARTURO BOBADILLA",
-    "VANESSA BOBADILLA",
-    "ARTURO BOBADILLA LIMÓN",
-    "CECI GONZALEZ",
-    "DANIEL GONZALEZ",
-    "LETICIA ANGULO",
-    "JOEL ANGULO",
-    "MARIELA LIMÓN",
-    "MIGUEL HERNANDEZ",
-    "DANIELA LIMÓN",
-    "ENRIQUE ROCHA",
-    "ERIKA ROCHA",
-    "ERIKA ELENES",
-    "SOFIA ROCHA",
-    "ROGELIO RAMIREZ",
-    "HICEL RAMIREZ ROCHA",
-    "HUSBERTO REVELES",
-    "LESLIE CHANTEL RAMIREZ",
-    "SEÑORA TAIDE ROCHA",
-    "ERNESTO SILLAS",
-    "LYZ GASTELUM",
-    "MAURICIO SILLAS",
-    "JORGE SILLAS",
-    "VALERIA SILLAS",
-    "ARELI MELENDREZ",
-    "TAIDE SILLAS",
-    "ULISES ARCE",
-    "SILVIA ROCHA",
-    "VERÓNICA TORRES",
-    "SILVIA TORRES",
-    "THOMAS",
-    "EMMANUEL TORRES",
-    "BRITNEY HURTADO",
-    "MAURICIO TORRES",
-    "DARITZA TORRES",
-    "CURTIS",
-    "ASHLEY ROBLES",
-    "LISKELSEY ROBLES",
-    "CAROLINA OVIEDO LASHGARI",
-    "NICO LASHGARI",
-    "COVADONGA ESCALANTE",
-    "EMILIO ROMO",
-    "SARAH SANCHEZ",
-    "SARAH SANCHEZ PLUS ONE",
-    "REBECCA SIFUENTES",
-    "ELIZABETH SIFUENTES",
-    "BRIANNA HERRERA",
-    "LANDON GRANILLO",
-    "LANDON PLUS ONE",
-    "KAILEY WOLF",
-    "HENRY WOLF",
-    "ALEXIS ANDERSON",
-    "REBECCA MUENCH",
-    "SOFÍA MAYER",
-    "ANDRÉS DOMÍNGUEZ",
-    "MICHELLE SMITH",
-    "JENNA CONTRERAS",
-    "MARIO OCHOA",
-    "LETIZIA RIEDEL",
-    "SEÑOR MARIO OCHOA",
-    "PALOMA ALONSO",
-    "VIANNY VALENZUELA",
-    "JESSICA VALENZUELA",
-    "CRISTINA MACÍAS",
-    "DANIELLA RAMIREZ",
-    "QUIQUE FLORES",
-    "ALEJANDRA DÁVILA",
-    "LUPITA LIMÓN",
-    "ALFONSO LIMÓN",
-    "GUADALUPE BARRAGÁN",
-    "POMPEYO BARRAGÁN",
-    "VERÓNICA JOHNSON",
-    "VERÓNICA JOHNSON PLUS ONE",
-    "JUAN BERNAL",
-    "NATALIA SMITH",
-    "SYDNEY RIBOT",
-    "SYDNEY RIBOT PLUS ONE",
-    "ALONDRA LIMÓN",
-    "MOE OTHMAN",
-    "ÁNGEL URETA",
-    "JUAN ALBERTO URETA",
-    "SAMMIE RYAN",
-    "CARMINE RYAN",
-    "ALEJANDRA ROCHA",
-    "MICHAEL LEAL",
-    "MARLENE ORTIZ",
-    "MAURICIO KIRSCHNER",
-    "RENATA NAVARRO"
+    "ALEXIA ROCHA", "MARIA DOMINGA LIMÓN", "LAURO ROCHA", "MAURICIO ROCHA", "PATRICIO ROCHA", "ISABEL MASCAREÑO",
+    "LAURO PATRICIO ROCHA", "ISABELLA ROCHA", "CRISTEL ROCHA", "HERNÁN CASTANEDA", "EMMA VICTORIA CASTANEDA",
+    "KENNY LIMÓN TORRES", "KEVIN LIMÓN TORRES", "MARIA FERNANDA LIMÓN", "ALAN RODRIGUEZ", "KRISBEL LIMÓN",
+    "RUBEN LIMÓN", "CIRO MEJIA", "REY MEJIA", "MARIANA CASIAN", "CINDY LIMÓN", "RODÓLFO RAMIREZ",
+    "LISETTE LIMÓN DE ROBLES", "GUSTAVO ROBLES", "JESÚS LIMÓN", "ADRIANA GASTELUM LIMÓN", "LOURDES MÉNDEZ",
+    "FELA OSUNA", "LOLIS LIMÓN", "LILIBEL GIL", "EDUARDO GUARELLO", "ORBELIN GIL", "ERIKA GIL", "IRÁM GIL",
+    "ILSE YESSENIA GIL", "RAUL VILLARREAL", "ESTEFANÍA VILLARREAL", "DIEGO VILLARREAL", "OCTAVIO VILLARREAL",
+    "MARIANA VILLARREAL", "OSCAR VILLARREAL", "RICARDO VILLARREAL", "AMAIRANI LIMÓN", "JAIME LIMÓN",
+    "LAMBERTO LIMÓN", "MIRNA LIMÓN", "CLARISSA LIMÓN", "EMMANUEL PEREZ", "NEREYDA LIMÓN", "SEÑOR ARTURO BOBADILLA",
+    "VANESSA BOBADILLA", "ARTURO BOBADILLA LIMÓN", "CECI GONZALEZ", "DANIEL GONZALEZ", "LETICIA ANGULO",
+    "JOEL ANGULO", "MARIELA LIMÓN", "MIGUEL HERNANDEZ", "DANIELA LIMÓN", "ENRIQUE ROCHA", "ERIKA ROCHA",
+    "ERIKA ELENES", "SOFIA ROCHA", "ROGELIO RAMIREZ", "HICEL RAMIREZ ROCHA", "HUSBERTO REVELES",
+    "LESLIE CHANTEL RAMIREZ", "SEÑORA TAIDE ROCHA", "ERNESTO SILLAS", "LYZ GASTELUM", "MAURICIO SILLAS",
+    "JORGE SILLAS", "VALERIA SILLAS", "ARELI MELENDREZ", "TAIDE SILLAS", "ULISES ARCE", "SILVIA ROCHA",
+    "VERÓNICA TORRES", "SILVIA TORRES", "THOMAS", "EMMANUEL TORRES", "BRITNEY HURTADO", "MAURICIO TORRES",
+    "DARITZA TORRES", "CURTIS", "ASHLEY ROBLES", "LISKELSEY ROBLES", "CAROLINA OVIEDO LASHGARI", "NICO LASHGARI",
+    "COVADONGA ESCALANTE", "EMILIO ROMO", "SARAH SANCHEZ", "SARAH SANCHEZ PLUS ONE", "REBECCA SIFUENTES",
+    "ELIZABETH SIFUENTES", "BRIANNA HERRERA", "LANDON GRANILLO", "LANDON PLUS ONE", "KAILEY WOLF", "HENRY WOLF",
+    "ALEXIS ANDERSON", "REBECCA MUENCH", "SOFÍA MAYER", "ANDRÉS DOMÍNGUEZ", "MICHELLE SMITH", "JENNA CONTRERAS",
+    "MARIO OCHOA", "LETIZIA RIEDEL", "SEÑOR MARIO OCHOA", "PALOMA ALONSO", "VIANNY VALENZUELA", "JESSICA VALENZUELA",
+    "CRISTINA MACÍAS", "DANIELLA RAMIREZ", "QUIQUE FLORES", "ALEJANDRA DÁVILA", "MARIA CARDENAS", "LUPITA LIMÓN",
+    "ALFONSO LIMÓN", "LIC HINOJOSA", "PALOMA HINOJOSA", "GUADALUPE BARRAGÁN", "POMPEYO BARRAGÁN", "VERÓNICA JOHNSON",
+    "VERÓNICA JOHNSON PLUS ONE", "SANDRA TORRES", "MIGUEL RIVAS", "JUAN BERNAL", "NATALIA SMITH",
+    "DRA. MICHEL MARTÍNEZ FRANCO", "DRA. MICHELLE PLUS ONE", "SYDNEY RIBOT", "SYDNEY RIBOT PLUS ONE",
+    "ALONDRA LIMÓN", "MOE OTHMAN", "ÁNGEL URETA", "JUAN ALBERTO URETA", "SAMMIE RYAN", "CARMINE RYAN",
+    "RAMIRO GAXIOLA", "FIDELIA GAXIOLA", "ALEJANDRA ROCHA", "MICHAEL LEAL", "MARLENE ORTIZ", "MAURICIO KIRSCHNER",
+    "RENATA NAVARRO", "JESSICA BAUMGARTNER", "AURORA SALAZAR"
 ];
 
 // DATOS DE SECCIONES
@@ -726,7 +450,6 @@ const slidesData = [
             <p><strong>Location:</strong> Hotel Andana | Valle de Guadalupe</p>
             <p><strong>Time:</strong> To be determined</p>
             <p><strong>Dress Code:</strong> Black Tie</p><br>
-            
             `,
             es: `<p><strong>VIERNES, SEPT 11</strong></p><br>
             <p><strong>Fiesta de Bienvenida</strong></p>
@@ -748,14 +471,13 @@ const slidesData = [
         }
     },
     { 
-        img: 'Hotels.webp', // Una imagen de estilo hotel/habitación luxury
+        img: 'Hotels.webp', 
         subtitle: { en: 'ACCOMMODATIONS', es: 'HOSPEDAJE' }, 
         btnText: { en: 'WHERE TO STAY', es: 'DÓNDE QUEDARSE' }, 
         title: { en: 'HOTELS', es: 'HOTELES' }, 
         detailsContent: {
             en: `
                 <p>For your comfort, we suggest these nearby options in Valle de Guadalupe:</p><br>
-
                 <img src="HotelAndana.jpg" class="chef-photo" alt="Hotel Andana">
                 <br><br>
                 <p><strong>HOTEL ANDANA</strong></p>
@@ -780,13 +502,10 @@ const slidesData = [
             `,
             es: `
                 <p>Para su comodidad, les sugerimos estas opciones cercanas en Valle de Guadalupe:</p><br>
-
                 <img src="HotelAndana.jpg" class="chef-photo" alt="Hotel Andana">
                 <br><br>
                 <p><strong>HOTEL ANDANA</strong></p>
-
                 Ubicado en el corazón del Valle de Guadalupe, Hotel Andana será el escenario de nuestro fin de semana de celebración. <br>
-
                 Por la privacidad de este momento, el hotel ha sido reservado exclusivamente para nuestros invitados.
                 Agradecemos considerar que será una celebración solo para adultos.
                 </p>
@@ -809,7 +528,6 @@ const slidesData = [
         }
     },
     {
-        // SECCIÓN CULINARY
         img: 'Catering.jpg', 
         subtitle: { en: 'CULINARY EXPERIENCE', es: 'EXPERIENCIA CULINARIA' }, 
         btnText: { en: 'MEET THE CHEF', es: 'CONOCE AL CHEF' }, 
@@ -829,7 +547,6 @@ const slidesData = [
                 <br>
                 <p>As a gesture of our affection and to express how much we value you being a part of our great day, we have prepared this table where the excellence of an internationally renowned chef will transform our wedding into an unforgettable memory.</p>
             </div>`, 
-            
             es: `
             <div class="chef-container">
                 <img src="Chef.webp" class="chef-photo" alt="Chef Javier Plascencia">
@@ -880,7 +597,6 @@ const slidesData = [
             en: `<p><a href="mailto:alexiayjavan@gmail.com" style="text-decoration: none; color: inherit;">alexiayjavan@gmail.com</a></p>`,
             es: `<p><a href="mailto:alexiayjavan@gmail.com" style="text-decoration: none; color: inherit;">alexiayjavan@gmail.com</a></p>`
         }
-
     }
 ];
 
@@ -920,9 +636,9 @@ function rebuildSwiper(initialIndex = 0) {
         roundLengths: true, 
         observer: true, 
         observeParents: true,
-        touchEventsTarget: 'container',      // ← AGREGA ESTA
-        preventClicks: false,                // ← AGREGA ESTA
-        preventClicksPropagation: false,     // ← AGREGA ESTA
+        touchEventsTarget: 'container',      
+        preventClicks: false,                
+        preventClicksPropagation: false,     
         breakpoints: { 320: { spaceBetween: 20 }, 768: { spaceBetween: 50 } },
         on: {
             init: function () { updateContent(this.realIndex); },
@@ -1076,7 +792,6 @@ const nextSectionTitle = document.getElementById('next-section-title');
 ctaBtn.addEventListener('click', (e) => { e.preventDefault(); openDetailsMode(swiper.activeIndex); });
 
 function openDetailsMode(index) {
-    // FRENO ANTI-BUGS: Si el índice llega vacío o no existe en los datos, cancelamos la acción.
     if (index === undefined || isNaN(index) || !slidesData[index]) return;
 
     const data = slidesData[index];
@@ -1092,11 +807,17 @@ function openDetailsMode(index) {
     nextSectionBar.setAttribute('data-next-index', nextIndex);
 
     if (data.isRSVP) {
+        // AGREGAMOS EL CONTENEDOR DE LA LISTA AUTOCOMPLETE DEBAJO DEL INPUT
         detailBodyText.innerHTML = `
-            <div id="rsvp-login-view" class="rsvp-step-container">
+            <div id="rsvp-login-view" class="rsvp-step-container" style="position:relative;">
                 <p>${t.codePrompt}</p>
                 <label class="rsvp-label">${t.codeLabel}</label>
-                <input type="text" id="rsvp-code-input" class="rsvp-input" placeholder="Ej. Name Surname">
+                
+                <div class="autocomplete-wrapper">
+                    <input type="text" id="rsvp-code-input" class="rsvp-input" placeholder="Ej. Name Surname" autocomplete="off">
+                    <ul id="autocomplete-list" class="autocomplete-items"></ul>
+                </div>
+
                 <div id="rsvp-error-msg" class="rsvp-error">${t.codeError}</div>
                 <button id="rsvp-check-btn" class="rsvp-btn">${t.enterBtn}</button>
             </div>
@@ -1117,14 +838,71 @@ function openDetailsMode(index) {
 }
 
 // =========================================================
-// LOGICA DE LOGIN: BUSCA CUALQUIER NOMBRE DEL GRUPO
+// LOGICA DE LOGIN CON AUTOCOMPLETADO
 // =========================================================
 function initRSVPLogin() {
     setTimeout(() => {
         const checkBtn = document.getElementById('rsvp-check-btn');
         const codeInput = document.getElementById('rsvp-code-input');
         const errorMsg = document.getElementById('rsvp-error-msg');
+        const autocompleteList = document.getElementById('autocomplete-list');
         
+        // 1. EVENTO MIENTRAS ESCRIBEN (AUTOCOMPLETE)
+        if (codeInput) {
+            codeInput.addEventListener('input', function() {
+                let val = this.value;
+                autocompleteList.innerHTML = ''; // Limpiamos lista
+                
+                if (!val) {
+                    autocompleteList.style.display = "none";
+                    return;
+                }
+
+                // Normalizamos lo que escribe el usuario para comparar bien (sin acentos, en mayusculas)
+                let searchVal = val.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+                let hasMatches = false;
+
+                // Buscamos en el array plano allGuestNamesForSearch
+                for (let i = 0; i < allGuestNamesForSearch.length; i++) {
+                    let dbName = allGuestNamesForSearch[i];
+                    let cleanDbName = dbName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+
+                    // Si el nombre de la DB incluye lo que el usuario escribió
+                    if (cleanDbName.includes(searchVal)) {
+                        hasMatches = true;
+                        const listItem = document.createElement('li');
+                        
+                        // Resaltar en negritas la parte que coincide (Opcional, pero se ve muy pro)
+                        const regex = new RegExp(`(${val})`, "gi");
+                        listItem.innerHTML = dbName.replace(regex, "<strong>$1</strong>");
+                        
+                        // Al darle click a la sugerencia, llenamos el input y ocultamos la lista
+                        listItem.addEventListener('click', function() {
+                            codeInput.value = dbName;
+                            autocompleteList.innerHTML = '';
+                            autocompleteList.style.display = "none";
+                        });
+
+                        autocompleteList.appendChild(listItem);
+                    }
+                }
+
+                if (hasMatches) {
+                    autocompleteList.style.display = "block";
+                } else {
+                    autocompleteList.style.display = "none";
+                }
+            });
+
+            // Cerrar lista si dan click fuera
+            document.addEventListener('click', function (e) {
+                if (e.target !== codeInput) {
+                    autocompleteList.style.display = "none";
+                }
+            });
+        }
+
+        // 2. EVENTO AL DAR CLICK EN "BUSCAR"
         if(checkBtn) {
             checkBtn.addEventListener('click', () => {
                 let rawCode = codeInput.value;
@@ -1140,19 +918,17 @@ function initRSVPLogin() {
                 for (const key in guestsDB) {
                     const groupArray = guestsDB[key];
                     
-                    for (let i = 0; i < groupArray.length; i++) {
-                        let cleanNameInDB = groupArray[i]
-                            .normalize("NFD")
-                            .replace(/[\u0300-\u036f]/g, "")
-                            .replace(/\s+/g, '')
-                            .toUpperCase();
-                            
-                        if (cleanInput === cleanNameInDB) {
-                            foundGroup = groupArray;
-                            break; 
-                        }
+                    // Solo revisamos el indice 0 (El invitado principal) para ver si hace match
+                    let cleanNameInDB = groupArray[0]
+                        .normalize("NFD")
+                        .replace(/[\u0300-\u036f]/g, "")
+                        .replace(/\s+/g, '')
+                        .toUpperCase();
+                        
+                    if (cleanInput === cleanNameInDB) {
+                        foundGroup = groupArray;
+                        break; 
                     }
-                    if (foundGroup) break; 
                 }
 
                 if (foundGroup) {
@@ -1178,7 +954,6 @@ function generateRSVPForm(guestNames) {
     guestNames.forEach((name, index) => {
         let i = index + 1;
         
-        // Verificamos si este invitado específico está en la lista del Rompehielo
         let upperName = name.toUpperCase();
         let isInvitedToIcebreaker = rompehieloVIPs.includes(upperName);
 
@@ -1196,7 +971,6 @@ function generateRSVPForm(guestNames) {
                 </div>
         `;
 
-        // SI ESTÁ INVITADO AL ROMPEHIELO, AGREGAMOS ESTA PREGUNTA EXTRA
         if (isInvitedToIcebreaker) {
             formHTML += `
                 <label class="rsvp-label">${t.icebreakerLabel}</label>
@@ -1326,7 +1100,6 @@ function generateRSVPForm(guestNames) {
                 })
                 .then(response => response.json())
                 .then(data => {
-                    // Mostrar mensaje de agradecimiento si se envió con éxito
                     detailBodyText.innerHTML = `
                         <div style="text-align:center; padding: 40px 0;">
                             <h3 class="story-heading">${t.thankTitle}</h3>
@@ -1336,11 +1109,10 @@ function generateRSVPForm(guestNames) {
                     `;
                 })
                 .catch(error => {
-                    // Si falla el internet o algo sale mal
                     console.error("Error enviando:", error);
                     warningMsg.textContent = t.errorSend || "Ocurrió un error al enviar. Por favor intenta de nuevo.";
                     warningMsg.style.display = 'block';
-                    btn.textContent = t.sendBtn; // Regresa el botón a su estado original
+                    btn.textContent = t.sendBtn;
                     btn.disabled = false;
                 });
             } else {
@@ -1359,8 +1131,6 @@ function closeDetailsMode() {
 
 nextSectionBar.addEventListener('click', () => {
     let nextIndex = parseInt(nextSectionBar.getAttribute('data-next-index'), 10);
-    
-    // FRENO: Si por alguna razón el índice se pierde, no hacemos nada para evitar el bug
     if (isNaN(nextIndex)) return; 
     
     swiper.slideTo(nextIndex);
@@ -1388,18 +1158,9 @@ function toggleDetailsBox() {
 }
 
 document.addEventListener('click', (e) => {
-    // 🚨 EL FRENO ANTI-BUGS PARA CELULARES:
-    // Si la pantalla es menor a 768px (celular), ignoramos el tap en el fondo.
-    // Así evitamos que al tocar la pantalla por accidente se apaguen las letras.
     if (window.innerWidth < 768) return;
-
-    // Si está abierta la sección de detalles, no hacemos nada
     if (document.body.classList.contains('details-mode')) return;
-    
-    // Si clickeamos un botón importante, no cambiamos de slide
     if (e.target.closest('#menu-btn-trigger, #nav-reserve-text, #main-logo, #cta-btn, #music-btn, .lang-opt, #menu-overlay, .details-layer')) return;
-    
-    // Si es computadora, revisamos si clickeó izquierda o derecha
     const mid = window.innerWidth / 2;
     if (e.clientX < mid) {
         swiper.slidePrev();
@@ -1422,9 +1183,6 @@ document.addEventListener('visibilitychange', () => {
     else { if (isPlaying) { bgMusic.play(); } }
 });
 
-// =========================================================
-// LÓGICA DE SWIPE GLOBAL PARA MÓVILES (PANTALLA COMPLETA)
-// =========================================================
 let touchStartX = 0;
 let touchStartY = 0;
 let touchEndX = 0;
@@ -1442,22 +1200,10 @@ document.addEventListener('touchend', e => {
 }, { passive: true });
 
 function handleGlobalSwipe() {
-    // 1. Si está el popup de detalles abierto, no hacemos nada
     if (document.body.classList.contains('details-mode')) return;
-    
-    // 2. Calculamos qué tanto se movió el dedo
     const xDiff = touchStartX - touchEndX;
     const yDiff = touchStartY - touchEndY;
-
-    // 3. Verificamos que el movimiento haya sido horizontal y no vertical (scroll)
-    // y que el arrastre haya sido mayor a 50 pixeles (para no cambiar por accidente)
     if (Math.abs(xDiff) > Math.abs(yDiff) && Math.abs(xDiff) > 50) {
-        if (xDiff > 0) {
-            // El dedo fue de Derecha a Izquierda (Swipe Left) -> Siguiente sección
-            swiper.slideNext();
-        } else {
-            // El dedo fue de Izquierda a Derecha (Swipe Right) -> Sección anterior
-            swiper.slidePrev();
-        }
+        if (xDiff > 0) { swiper.slideNext(); } else { swiper.slidePrev(); }
     }
 }

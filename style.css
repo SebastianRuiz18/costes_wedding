@@ -325,3 +325,59 @@ body.details-mode .middle-wrapper { opacity: 0 !important; transform: translateY
     .btn-box { margin-top: 40px; padding: 14px 45px; font-size: 0.75rem; }
     .details-container { width: 500px; }
 }
+
+/* =========================================
+   9. AUTOCOMPLETE BUSCADOR RSVP
+   ========================================= */
+.autocomplete-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #000;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: none; /* Oculto por defecto */
+}
+
+.autocomplete-items li {
+    padding: 15px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    font-family: 'FuturaBookPro', sans-serif;
+    font-size: 0.9rem;
+    color: #000;
+    text-transform: capitalize;
+}
+
+.autocomplete-items li:hover {
+    background-color: #f2f2f2;
+}
+
+/* Scrollbar estilizado para la cajita */
+.autocomplete-items::-webkit-scrollbar {
+    width: 6px;
+}
+.autocomplete-items::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+.autocomplete-items::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+.autocomplete-items::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
