@@ -326,7 +326,12 @@ const guestsDB = {
     "MAURICIOKIRSCHNER": ["Mauricio Kirschner"],
     "RENATANAVARRO": ["Renata Navarro"],
     "JESSICABAUMGARTNER": ["Jessica Baumgartner"],
-    "AURORASALAZAR": ["Aurora Salazar"]
+    "AURORASALAZAR": ["Aurora Salazar"],
+    "YANFISHER": ["Yan Fisher"],
+    "LUPITALIMONCASTANEDA": ["Lupita Limón Castañeda"],
+    "DANIELCASTANEDA": ["Daniel Castañeda"],
+    "LUCILAMASCARENO": ["Lucila Mascareño"],
+    "JENNIFERSILLAS": ["Jennifer Sillas"],
 };
 
 // ==========================================
@@ -385,7 +390,11 @@ const rompehieloVIPs = [
     "DRA. MICHEL MARTÍNEZ FRANCO", "DRA. MICHELLE PLUS ONE", "SYDNEY RIBOT", "SYDNEY RIBOT PLUS ONE",
     "ALONDRA LIMÓN", "MOE OTHMAN", "ÁNGEL URETA", "JUAN ALBERTO URETA", "SAMMIE RYAN", "CARMINE RYAN",
     "RAMIRO GAXIOLA", "FIDELIA GAXIOLA", "ALEJANDRA ROCHA", "MICHAEL LEAL", "MARLENE ORTIZ", "MAURICIO KIRSCHNER",
-    "RENATA NAVARRO", "JESSICA BAUMGARTNER", "AURORA SALAZAR"
+    "RENATA NAVARRO", "JESSICA BAUMGARTNER", "AURORA SALAZAR",
+
+    //extras
+    "YAN FISHER", "LUPITA LIMÓN CASTAÑEDA", "DANIEL CASTAÑEDA", "LUCILA MASCAREÑO", "JENNIFER SILLAS"
+
 ];
 
 // DATOS DE SECCIONES
