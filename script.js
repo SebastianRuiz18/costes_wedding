@@ -337,6 +337,8 @@ const guestsDB = {
     "THOMASLIMON": ["Thomas Limón"],
     "GUILLERMINACASTILLO": ["Guillermina Castillo"],
     "LEONARDOCABANILLAS": ["Leonardo Cabanillas"],
+    "SOFIARICO": ["Sofía Rico"],
+    "KAMILAIBARRA": ["Kamila Ibarra"],
 };
 
 // ==========================================
@@ -401,7 +403,10 @@ const rompehieloVIPs = [
     "YAN FISHER", "LUPITA LIMÓN CASTAÑEDA", "DANIEL CASTAÑEDA", "LUCILA MASCAREÑO", "JENNIFER SILLAS",
 
     //extras 2
-    "TACHY LIMÓN", "MELENY ALVARADO", "THOMAS LIMÓN", "GUILLERMINA CASTILLO", "LEONARDO CABANILLAS"
+    "TACHY LIMÓN", "MELENY ALVARADO", "THOMAS LIMÓN", "GUILLERMINA CASTILLO", "LEONARDO CABANILLAS",
+
+    //extras 3
+    "SOFÍA RICO", "KAMILA IBARRA"
 
 ];
 
