@@ -478,7 +478,11 @@ const slidesData = [
 
             <p><strong>Reception</strong></p>
             <p><strong>Location:</strong> Hotel Andana | Valle de Guadalupe</p>
-            <p><strong>Time:</strong> 7:30 PM</p>
+            <p><strong>Time:</strong> 7:30 PM</p><br>
+
+            <p>Traditional Monetary Gift</p>
+            <p><strong>Family</strong> Dance Tradition<br><br>
+
             <p><strong>Dress Code:</strong> Black Tie</p><br>
             `,
             es: `<p><strong>VIERNES, SEPT 11</strong></p><br>
@@ -495,7 +499,11 @@ const slidesData = [
 
             <p><strong>Recepción</strong></p>
             <p><strong>Ubicación:</strong> Hotel Andana | Valle de Guadalupe</p>
-            <p><strong>Horario:</strong> 7:30 PM</p>
+            <p><strong>Horario:</strong> 7:30 PM</p><br>
+
+            <p><strong>Lluvia de Sobres</strong></p>
+            <p>Baile Tradicional <strong>Familiar</strong></p><br>
+
             <p><strong>Codigo de Vestimenta:</strong> Etiqueta Rigurosa</p><br>
             `
         }
