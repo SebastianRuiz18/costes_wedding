@@ -467,35 +467,35 @@ const slidesData = [
             en: `<p><strong>FRIDAY, SEPT 11</strong></p><br>
             <p><strong>Opening Night Welcome Party</strong></p>
             <p><strong>Location:</strong> Casa Pedro Domecq | Valle de Guadalupe</p>
-            <p><strong>Time:</strong> To be determined</p>
+            <p><strong>Time:</strong> 7:00 PM</p>
             <p><strong>Dress Code:</strong> Cocktail Style</p><br>
 
             <p><strong>SATURDAY, SEPT 12</strong></p><br>
             <p><strong>Mass Ceremony</strong></p>
             <p><strong>Location:</strong> Hotel Andana | Valle de Guadalupe</p>
-            <p><strong>Time:</strong> To be determined</p>
+            <p><strong>Time:</strong> 6:00 PM</p>
             <p><strong>Dress Code:</strong> Black Tie</p><br>
 
             <p><strong>Reception</strong></p>
             <p><strong>Location:</strong> Hotel Andana | Valle de Guadalupe</p>
-            <p><strong>Time:</strong> To be determined</p>
+            <p><strong>Time:</strong> 7:30 PM</p>
             <p><strong>Dress Code:</strong> Black Tie</p><br>
             `,
             es: `<p><strong>VIERNES, SEPT 11</strong></p><br>
             <p><strong>Fiesta de Bienvenida</strong></p>
             <p><strong>Ubicación:</strong> Casa Pedro Domecq | Valle de Guadalupe</p>
-            <p><strong>Horario:</strong> Por confirmar</p>
+            <p><strong>Horario:</strong> 7:00 PM</p>
             <p><strong>Codigo de Vestimenta:</strong> Cocktail Style</p><br>
 
             <p><strong>SABADO, SEPT 12</strong></p><br>
             <p><strong>Ceremonia Religiosa</strong></p>
             <p><strong>Ubicación:</strong> Hotel Andana | Valle de Guadalupe</p>
-            <p><strong>Horario:</strong> Por confirmar</p>
+            <p><strong>Horario:</strong> 6:00 PM</p>
             <p><strong>Codigo de Vestimenta:</strong> Etiqueta Rigurosa</p><br>
 
             <p><strong>Recepción</strong></p>
             <p><strong>Ubicación:</strong> Hotel Andana | Valle de Guadalupe</p>
-            <p><strong>Horario:</strong> Por confirmar</p>
+            <p><strong>Horario:</strong> 7:30 PM</p>
             <p><strong>Codigo de Vestimenta:</strong> Etiqueta Rigurosa</p><br>
             `
         }
